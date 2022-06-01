@@ -15,7 +15,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-                CelularSeeder::class,
+            UserSeeder::class,
+            CelularSeeder::class,
+            //OrcamentoSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
     }
