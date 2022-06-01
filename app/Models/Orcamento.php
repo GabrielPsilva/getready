@@ -9,5 +9,6 @@ class Orcamento extends Model
 {
     use HasFactory;
 
-    protected $table = 'orcamento';
+    protected $table = 'orcamentos';
+
 }

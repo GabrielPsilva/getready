@@ -13,8 +13,11 @@ class CreateOrcamentoTable extends Migration
      */
     public function up()
     {
-        Schema::create('orcamento', function (Blueprint $table) {
+        Schema::create('orcamentos', function (Blueprint $table) {
             $table->id();
+            $table->integer('celular_id');
+            $table->string('nome');
+            $table->string('email');
             $table->timestamps();
         });
     }

@@ -252,6 +252,11 @@ return [
             //'can'  => 'manage-blog',
         ],
         [
+            'text' => 'Orçamento',
+            'url'  => 'orcamento/create',
+            //'can'  => 'manage-blog',
+        ],
+        [
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',

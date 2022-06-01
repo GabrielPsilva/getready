@@ -23,6 +23,14 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//----------------------------------------ORCAMENTO-------------------------------------------
+
+Route::get('/orcamento/create', [OrcamentoController::class, 'create'])->name('orcamento.create');
+Route::post('/orcamento/create', [OrcamentoController::class, 'store'])->name('orcamento.store');
+
+//----------------------------------------ORCAMENTO-------------------------------------------
+
+
 //----------------------------------------CELULARES-------------------------------------------
 
 Route::get('/celular', [CelularController::class, 'index'])->name('celular.index');
