@@ -32,15 +32,15 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-            'name' => 'lucas',
-            'email' => 'lucas@gmail.com',
+            'name' => 'gabriel',
+            'email' => 'gabriel@gmail.com',
             'password' => Hash::make('123456'),
             'perfil' => 2,
         ]);
 
         User::create([
-            'name' => 'lino',
-            'email' => 'lino@gmail.com',
+            'name' => 'vic',
+            'email' => 'vic@gmail.com',
             'password' => Hash::make('123456'),
             'perfil' => 1,
         ]);
