@@ -39,7 +39,7 @@ class OrcamentoController extends Controller
     public function store(Request $request)
     {
         $messages = [
-            'celular_id.required'  => 'O campo celular é obrigatorio!',
+            'celular_id.required'  => 'Escolher um celular é obrigatorio!',
             'nome.required'  => 'O campo :attribute é obrigatorio!',
             'nome.min'       => 'O :attribute precisa ter no mínimo :min.',
             'email.required' => 'O campo :attribute é obrigatorio!',
