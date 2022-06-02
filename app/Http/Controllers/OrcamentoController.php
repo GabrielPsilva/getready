@@ -43,18 +43,24 @@ class OrcamentoController extends Controller
             'nome.required'  => 'O campo :attribute é obrigatorio!',
             'nome.min'       => 'O :attribute precisa ter no mínimo :min.',
             'email.required' => 'O campo :attribute é obrigatorio!',
+            'cpf.required'   => 'O campo :attribute é obrigatorio!',
+            'telefone.required' => 'O campo :attribute é obrigatorio!',
         ];
 
         $validated = $request->validate([
             'celular_id'  => 'required',
-            'nome'          => 'required|min:5',
+            'nome'          => 'required|min:3',
             'email'         => 'required',
+            'cpf'           => 'cpf',
+            'telefone'      =>'required', 
         ], $messages);
 
         $orcamento = new Orcamento;
         $orcamento->celular_id      = $request->celular_id;
         $orcamento->nome          = $request->nome;
-        $orcamento->email         = $request->email;
+        $orcamento->email          = $request->email;
+        $orcamento->cpf            = $request->cpf;
+        $orcamento->telefone       = $request->telefone;
         $orcamento->save();
 
         return redirect('/orcamento/create')->with('status', 'Orçamento efetuado com sucesso!');

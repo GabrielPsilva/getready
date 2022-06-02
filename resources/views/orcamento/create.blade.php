@@ -26,14 +26,20 @@
 
 {!! Form::open(['url' => '/orcamento/create']) !!}
 <br>
-{{ Form::label('celular', 'Celular') }}
+{{ Form::label('Celular', 'Celular') }}
 {{ Form::select('celular_id', $celulares) }}
 <br>
-{{ Form::label('nome', 'Nome') }}
+{{ Form::label('Nome', 'Nome') }}
 {{ Form::text('nome') }}
 <br>
-{{ Form::label('email', 'email') }}
+{{ Form::label('Email', 'email') }}
 {{ Form::text('email') }}
+<br>
+{{ Form::label('cpf', 'cpf') }}
+{{ Form::text('cpf') }}
+<br>
+{{ Form::label('telefone', 'telefone') }}
+{{ Form::text('Telefone') }}
 <br>
 {{ Form::submit('Enviar') }}
 
