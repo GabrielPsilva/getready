@@ -100,6 +100,16 @@ class OrcamentoController extends Controller
         //
     }
 
+    public function calcular(Request $request)
+    {
+        $dados=Celular::find($request["celular_id"]);
+
+        $dataAtual=date('y');
+
+        $dataFabricacao=$dados["data de fabricacao"];
+
+
+    }
     /**
      * Remove the specified resource from storage.
      *
