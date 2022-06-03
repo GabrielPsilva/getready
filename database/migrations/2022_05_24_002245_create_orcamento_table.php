@@ -18,6 +18,11 @@ class CreateOrcamentoTable extends Migration
             $table->integer('celular_id');
             $table->string('nome');
             $table->string('email');
+            $table->string('cpf');
+            $table->string('telefone');
+            $table->string('ano');
+            $table->float('valor_total')->nullable();
+            $table->float('valor_parcela')->nullable();
             $table->timestamps();
         });
     }

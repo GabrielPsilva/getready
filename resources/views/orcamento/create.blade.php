@@ -29,6 +29,8 @@
 {{ Form::label('Celular', 'Celular') }}
 {{ Form::select('celular_id', $celulares) }}
 <br>
+{{ Form::selectRange('ano', 2010, 2022) }}
+<br>
 {{ Form::label('Nome', 'Nome') }}
 {{ Form::text('nome') }}
 <br>
@@ -39,7 +41,7 @@
 {{ Form::text('cpf') }}
 <br>
 {{ Form::label('telefone', 'telefone') }}
-{{ Form::text('Telefone') }}
+{{ Form::text('telefone') }}
 <br>
 {{ Form::submit('Enviar') }}
 

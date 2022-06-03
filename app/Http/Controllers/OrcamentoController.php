@@ -45,22 +45,36 @@ class OrcamentoController extends Controller
             'email.required' => 'O campo :attribute é obrigatorio!',
             'cpf.required'   => 'O campo :attribute é obrigatorio!',
             'telefone.required' => 'O campo :attribute é obrigatorio!',
+            'ano.required' => 'O campo :attribute é obrigatorio!',
         ];
 
         $validated = $request->validate([
             'celular_id'  => 'required',
             'nome'          => 'required|min:3',
             'email'         => 'required',
-            'cpf'           => 'cpf',
+            'cpf'           => 'required',
             'telefone'      =>'required', 
+            'ano'           => 'required',
         ], $messages);
+        
+        $celular = Celular::where('id', $request->celular_id)->first();
+        //dd($celular);
+
+        $ano_atual = date("Y");
+        //dd($ano_atual);
+        
+        $valor_total = ($celular->valor - (($ano_atual - $request->ano) * 10)) / 2;
+        $valor_parcela = round($valor_total/12, 2);
 
         $orcamento = new Orcamento;
-        $orcamento->celular_id      = $request->celular_id;
-        $orcamento->nome          = $request->nome;
+        $orcamento->celular_id     = $request->celular_id;
+        $orcamento->nome           = $request->nome;
         $orcamento->email          = $request->email;
         $orcamento->cpf            = $request->cpf;
         $orcamento->telefone       = $request->telefone;
+        $orcamento->ano            = $request->ano;
+        $orcamento->valor_total    = $request->valor_total;
+        $orcamento->valor_parcela  = $request->valor_parcela;
         $orcamento->save();
 
         return redirect('/orcamento/create')->with('status', 'Orçamento efetuado com sucesso!');
@@ -98,17 +112,6 @@ class OrcamentoController extends Controller
     public function update(Request $request, $id)
     {
         //
-    }
-
-    public function calcular(Request $request)
-    {
-        $dados=Celular::find($request["celular_id"]);
-
-        $dataAtual=date('y');
-
-        $dataFabricacao=$dados["data de fabricacao"];
-
-
     }
     /**
      * Remove the specified resource from storage.
