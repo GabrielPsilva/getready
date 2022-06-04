@@ -34,13 +34,13 @@
 {{ Form::label('Nome', 'Nome') }}
 {{ Form::text('nome') }}
 <br>
-{{ Form::label('Email', 'email') }}
+{{ Form::label('mail', 'Email') }}
 {{ Form::text('email') }}
 <br>
-{{ Form::label('cpf', 'cpf') }}
+{{ Form::label('cpf', 'Cpf') }}
 {{ Form::text('cpf') }}
 <br>
-{{ Form::label('telefone', 'telefone') }}
+{{ Form::label('telefone', 'Telefone') }}
 {{ Form::text('telefone') }}
 <br>
 {{ Form::submit('Enviar') }}
