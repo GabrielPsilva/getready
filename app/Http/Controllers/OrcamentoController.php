@@ -53,7 +53,7 @@ class OrcamentoController extends Controller
             'nome'          => 'required|min:3',
             'email'         => 'required',
             'cpf'           => 'required',
-            'telefone'      =>'required', 
+            'telefone'      => 'required', 
             'ano'           => 'required',
         ], $messages);
         
@@ -121,6 +121,7 @@ class OrcamentoController extends Controller
     {
         //
     }
+
     /**
      * Remove the specified resource from storage.
      *
