@@ -62,7 +62,7 @@ class OrcamentoController extends Controller
 
         $ano_atual = date("Y");
         //dd($ano_atual);
-        
+
         $valor_total = ($celular->valor - (($ano_atual - $request->ano) * 10)) / 2;
         $valor_parcela = round($valor_total/12, 2);
 
@@ -73,11 +73,19 @@ class OrcamentoController extends Controller
         $orcamento->cpf            = $request->cpf;
         $orcamento->telefone       = $request->telefone;
         $orcamento->ano            = $request->ano;
-        $orcamento->valor_total    = $request->valor_total;
-        $orcamento->valor_parcela  = $request->valor_parcela;
+        $orcamento->valor_total    = $valor_total;
+        $orcamento->valor_parcela  = $valor_parcela;
         $orcamento->save();
 
-        return redirect('/orcamento/create')->with('status', 'Orçamento efetuado com sucesso!');
+
+        $mensagem = "Caro(a) {$orcamento->nome}<br>";
+        $mensagem .= "o valor total do seu seguro é R$ $orcamento->valor_total <br>";
+        for ($i=1; $i < 12; $i++) { 
+            $mensagem .= "- parcela {$i} = {$orcamento->valor_parcela}<br>";
+        }
+        //dd($mensagem);
+
+        return redirect('/orcamento/create')->with('status', $mensagem);//'Orçamento efetuado com sucesso!');
     }
 
     /**
