@@ -27,6 +27,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/orcamento/create', [OrcamentoController::class, 'create'])->name('orcamento.create');
 Route::post('/orcamento/create', [OrcamentoController::class, 'store'])->name('orcamento.store');
+Route::get('/orcamento/create_pdf', [OrcamentoController::class, 'create_pdf'])->name('orcamento.create_pdf');
 
 //----------------------------------------ORCAMENTO-------------------------------------------
 

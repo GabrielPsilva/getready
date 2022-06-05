@@ -14,6 +14,14 @@
                         </div>
                     @endif
 
+@isset($mensagem)
+    <div class="alert alert-success" role="alert">
+        {!! $mensagem !!}
+    </div>
+
+    <a href="{{ URL::to('orcamento/create_pdf') }}"><button type="button" class="btn btn-block btn-success btn-sm">Criar PDF</button></a>
+@endisset
+
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
