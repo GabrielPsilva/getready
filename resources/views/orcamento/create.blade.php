@@ -37,6 +37,7 @@
 {{ Form::label('Celular', 'Celular') }}
 {{ Form::select('celular_id', $celulares) }}
 <br>
+{{ Form::label('Ano de fabricacao', 'Ano de fabricação') }}
 {{ Form::selectRange('ano', 2010, 2022) }}
 <br>
 {{ Form::label('Nome', 'Nome') }}
