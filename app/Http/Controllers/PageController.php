@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Celular;
+use App\Models\Templates;
 
 class PageController extends Controller
 {
@@ -26,8 +26,9 @@ class PageController extends Controller
     
      public function index()
     {
-        $celulares = Celular::orderBy('nome', 'ASC')->get();
-        return view('celular.index', ['celulares' => $celulares]);
+        /*$celulares = Celular::orderBy('nome', 'ASC')->get();
+        return view('index', ['celulares' => $celulares]);*/
+        return view('page.index');
     }
     
     /*public function products()
