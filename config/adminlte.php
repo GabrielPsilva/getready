@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => '<b>Get</b>Ready',
-    'logo_img' => 'vendor\adminlte\dist\img\getready-500px.png',
+    'logo_img' => 'vendor\adminlte\dist\img\smartphone.png',
     'logo_img_class' => 'brand-image    ',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
