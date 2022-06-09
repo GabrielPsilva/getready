@@ -18,15 +18,15 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet" type="text/css">
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="{{ URL::asset('assets/css/responsive.css') }}" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -92,17 +92,17 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="img-box">
-                    <img src="images/slider-img.png" alt="" />
+                    <img src="assets/images/slider-img.png" alt="" />
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="img-box">
-                    <img src="images/slider-img.png" alt="" />
+                    <img src="assets/images/slider-img.png" alt="" />
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="img-box">
-                    <img src="images/slider-img.png" alt="" />
+                    <img src="assets/images/slider-img.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -292,7 +292,7 @@
             <div class="box">
               <div class="head-box">
                 <div class="img-box">
-                  <img src="images/cloud-download.png" alt="" />
+                  <img src="assets/images/cloud-download.png" alt="" />
                 </div>
                 <h6>
                   Download The App
@@ -309,7 +309,7 @@
             <div class="box">
               <div class="head-box">
                 <div class="img-box">
-                  <img src="images/trophy_.png" alt="" />
+                  <img src="assets/images/trophy_.png" alt="" />
                 </div>
                 <h6>
                   Easy to Customize
@@ -331,14 +331,14 @@
           </div>
           <div class="col-md-4">
             <div class="main-img-box">
-              <img src="images/download-img.png" alt="" />
+              <img src="assets/images/download-img.png" alt="" />
             </div>
           </div>
           <div class="col-md-4">
             <div class="box">
               <div class="head-box">
                 <div class="img-box">
-                  <img src="images/playstore.png" alt="" />
+                  <img src="assets/images/playstore.png" alt="" />
                 </div>
                 <h6>
                   Connect Your Store
@@ -355,7 +355,7 @@
             <div class="box">
               <div class="head-box">
                 <div class="img-box">
-                  <img src="images/heart.png" alt="" />
+                  <img src="assets/images/heart.png" alt="" />
                 </div>
                 <h6>
                   Enjoy Our App
@@ -446,10 +446,10 @@
       <div class="client_container layout_padding2-top">
         <div class="client-id">
           <div class="img-box">
-            <img src="images/client.png" alt="" />
+            <img src="assets/images/client.png" alt="" />
           </div>
           <div class="name">
-            <img src="images/quote.png" alt="" />
+            <img src="assets/images/quote.png" alt="" />
             <h6>
               Sandy Delex
             </h6>
@@ -515,7 +515,7 @@
         </div>
         <div class="col-md-6">
           <div class="contact_img-box">
-            <img src="images/contact-img.png" alt="">
+            <img src="assets/images/contact-img.png" alt="">
           </div>
         </div>
       </div>
@@ -594,17 +594,17 @@
 
         <div class="social-box">
           <a href="">
-            <img src="images/fb.png" alt="">
+            <img src="assets/images/fb.png" alt="">
           </a>
 
           <a href="">
-            <img src="images/twitter.png" alt="">
+            <img src="assets/images/twitter.png" alt="">
           </a>
           <a href="">
-            <img src="images/linkedin.png" alt="">
+            <img src="assets/images/linkedin.png" alt="">
           </a>
           <a href="">
-            <img src="images/instagram.png" alt="">
+            <img src="assets/images/instagram.png" alt="">
           </a>
         </div>
       </div>
@@ -621,8 +621,8 @@
   </section>
   <!-- footer section -->
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.js"></script>
 
   <script>
     function openNav() {
