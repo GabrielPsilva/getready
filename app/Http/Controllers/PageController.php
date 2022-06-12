@@ -35,15 +35,15 @@ class PageController extends Controller
     {
         $produtos = Produto::orderBy('nome', 'ASC')->get();
         return view('page.products', ['produtos' => $produtos]);
-    }
+    }*/
 
-    public function contacts()
+    public function contact()
     {
-        return view('page.contacts');
+        return view('page.contact');
     }
     
     public function about()
     {
         return view('page.about');
-    }*/
+    }
 }
