@@ -30,11 +30,8 @@ Route::get('/', [PageController::class, 'index'])->name('index');
 //Route::get('/'.PAGE.'/products', [PageController::class, 'products'])->name(PAGE.'.products');
 
 Route::get('/page/contact', [PageController::class, 'contact'])->name('page.contact');
-
 Route::get('/page/about', [PageController::class, 'about'])->name('page.about');
-
 Route::get('/page/index', [PageController::class, 'index'])->name('index');
-
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //----------------------------------------ORCAMENTO---------------------------------------------------

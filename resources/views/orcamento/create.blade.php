@@ -1,11 +1,21 @@
 @extends('adminlte::page')
 
+@section('content_header')
+    <h1 style="text-align: center">Seguro celular</h1>
+@stop
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+            <div class="card card-primary">
+                <div class="card-header">{{ __('Solicite um plano') }}
+
+                    <div class="card-tools">
+                        <span class="badge badge-light">Formulário</span>
+                    </div>
+
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -32,29 +42,38 @@
     </div>
 @endif
 
-{!! Form::open(['url' => '/orcamento/create']) !!}
-<br>
-{{ Form::label('Celular', 'Celular') }}
-{{ Form::select('celular_id', $celulares) }}
-<br>
-{{ Form::label('Ano de fabricacao', 'Ano de fabricação') }}
-{{ Form::selectRange('ano', 2010, 2022) }}
-<br>
-{{ Form::label('Nome', 'Nome') }}
-{{ Form::text('nome') }}
-<br>
-{{ Form::label('mail', 'Email') }}
-{{ Form::text('email') }}
-<br>
-{{ Form::label('cpf', 'Cpf') }}
-{{ Form::text('cpf') }}
-<br>
-{{ Form::label('telefone', 'Telefone') }}
-{{ Form::text('telefone') }}
-<br>
-{{ Form::submit('Enviar') }}
 
-{!! Form::close() !!}
+    {!! Form::open(['url' => '/orcamento/create']) !!}
+    <div class="row">
+        <div class="col-12">
+        {{ Form::label('Celular', 'Celular') }}
+        {{ Form::select('celular_id', $celulares) }}
+        </div>
+        <div class="col-6">
+        {{ Form::label('Ano de fabricacao', 'Ano de fabricação') }}
+        {{ Form::selectRange('ano', 2010, 2022) }}
+        </div>
+        <div class="col-12">
+        {{ Form::label('Nome', 'Nome') }}
+        {{ Form::text('nome') }}
+        </div>
+        <div class="col-12">
+        {{ Form::label('mail', 'Email') }}
+        {{ Form::text('email') }}
+        </div>
+        <div class="col-12">
+        {{ Form::label('cpf', 'Cpf') }}
+        {{ Form::text('cpf') }}
+        </div>
+        <div class="col-12">
+        {{ Form::label('telefone', 'Telefone') }}
+        {{ Form::text('telefone') }}
+        </div>
+    </div>
+    {{ Form::submit('Enviar' , ['class' => 'btn btn-outline-success mt-2 mb-2 ']) }}
+    <a class="btn btn-primary " href="{{URL::to('home/')}}">Voltar</a>
+
+    {!! Form::close() !!}
 
 </div>
 </div>
