@@ -5,7 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Modelos') }}
+                
+                    <a href="{{ URL::to('celular/create') }}"><button type="button" class="btn btn-success btn-sm float-right">Adicionar novo modelo</button></a>
+
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -27,16 +31,14 @@
                     }
                 </script>
                 
-                <a href="{{ URL::to('celular/create') }}"><button type="button" class="btn btn-block btn-success btn-sm">Criar</button></a>
-                
                     <table class="table no-margin">
                         <thead>
                             <tr>
-                                <th>id</th>
+                                <th>#id</th>
                                 <th>nome</th>
                                 <th>valor</th>
                                 <th></th>
-                                <th></th>
+                                <th>actions</th>
                                 <th></th>
                             </tr>
                         </thead>

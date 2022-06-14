@@ -29,7 +29,7 @@
         {!! $mensagem !!}
     </div>
 
-    <a href="{{ URL::to('orcamento/create_pdf') }}"><button type="button" class="btn btn-block btn-success btn-sm">Criar PDF</button></a>
+    <a href="{{ URL::to('orcamento/create_pdf') }}"><button type="button" class="btn btn-primary">Criar PDF</button></a>
 @endisset
 
 @if ($errors->any())
@@ -72,7 +72,7 @@
         </div>
     </div>
     {{ Form::submit('Enviar' , ['class' => 'btn btn-outline-success mt-2 mb-2 ']) }}
-    <a class="btn btn-primary " href="{{URL::to('home/')}}">Voltar</a>
+    <a class="btn btn-primary " href="{{URL::to('orcamento/create/')}}">Cancelar</a>
 
     {!! Form::close() !!}
 

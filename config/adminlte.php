@@ -250,6 +250,7 @@ return [
             'text' => 'celular',
             'url'  => 'celular',
             'can'  => 'is_admin',
+            // apenas o admin pode visualizar essa rota
         ],
         [
             'text' => 'Orçamento',
