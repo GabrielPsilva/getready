@@ -249,7 +249,7 @@ return [
         [
             'text' => 'celular',
             'url'  => 'celular',
-            //'can'  => 'manage-blog',
+            'can'  => 'is_admin',
         ],
         [
             'text' => 'Orçamento',

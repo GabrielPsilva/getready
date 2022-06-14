@@ -45,17 +45,17 @@ Route::get('/orcamento/create_pdf', [OrcamentoController::class, 'create_pdf'])-
 
 //----------------------------------------CELULARES-------------------------------------------
 
-Route::get('/celular', [CelularController::class, 'index'])->name('celular.index');
+Route::get('/celular', [CelularController::class, 'index'])->name('celular.index')->can('is_admin');
 
-Route::get('/celular/create', [CelularController::class, 'create'])->name('celular.create');
-Route::post('/celular/create', [CelularController::class, 'store'])->name('celular.store');
+Route::get('/celular/create', [CelularController::class, 'create'])->name('celular.create')->can('is_admin');
+Route::post('/celular/create', [CelularController::class, 'store'])->name('celular.store')->can('is_admin');
 
-Route::get('/celular/{id}', [CelularController::class, 'show'])->name('celular.show');
+Route::get('/celular/{id}', [CelularController::class, 'show'])->name('celular.show')->can('is_admin');
 
-Route::get('/celular/{id}/edit', [CelularController::class, 'edit'])->name('celular.edit');
-Route::put('/celular/{id}', [CelularController::class, 'update'])->name('celular.update');
+Route::get('/celular/{id}/edit', [CelularController::class, 'edit'])->name('celular.edit')->can('is_admin');
+Route::put('/celular/{id}', [CelularController::class, 'update'])->name('celular.update')->can('is_admin');
 
-Route::delete('/celular/{id}', [CelularController::class, 'destroy'])->name('celular.destroy');
+Route::delete('/celular/{id}', [CelularController::class, 'destroy'])->name('celular.destroy')->can('is_admin');
 
 // ----------------------------------------- CELULARES --------------------------------------
 

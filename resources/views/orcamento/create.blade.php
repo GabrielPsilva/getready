@@ -42,7 +42,8 @@
     </div>
 @endif
 
-
+    <br>
+    <br>
     {!! Form::open(['url' => '/orcamento/create']) !!}
     <div class="row">
         <div class="col-12">
