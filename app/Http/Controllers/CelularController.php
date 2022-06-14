@@ -69,7 +69,7 @@ class CelularController extends Controller
      */
     public function index()
     {
-        $celulares = Celular::orderBy('nome', 'ASC')->get();
+        $celulares = Celular::orderBy('id', 'ASC')->get();
         return view('celular.index', ['celulares' => $celulares]);
     }
 

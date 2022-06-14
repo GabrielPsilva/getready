@@ -12,13 +12,13 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>UXOS</title>
+  <title>Get Ready</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/bootstrap.css') }}" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
@@ -35,9 +35,9 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="{{ URL::to('home') }}">
             <span>
-              UXOS
+              Get Ready
             </span>
           </a>
 
@@ -51,10 +51,10 @@
             </div>
             <div id="myNav" class="overlay">
               <div class="overlay-content">
-                <a href="index.html">HOME</a>
-                <a href="about.html">ABOUT</a>
-                <a href="feature.html">FEATURE</a>
-                <a href="contact.html">CONTACT US</a>
+                <a href="{{ URL::to('home') }}">LOGIN</a>
+                <a href="{{ URL::to('page/contact') }}">CONTATO</a>
+                <a href="{{ URL::to('page/about') }}">SOBRE NÓS</a>
+                <a href="contact.html">DÚVIDAS</a>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@
           <div class="col-md-7">
             <div class="detail-box">
               <h2>
-                best design
+                Seguro celular
               </h2>
               <h1>
                 Mobile <br />
@@ -92,17 +92,17 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="img-box">
-                    <img src="assets/images/slider-img.png" alt="" />
+                    <img src="{{ URL::asset('assets/images/tela 1 (1).PNG') }}" alt="" />
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="img-box">
-                    <img src="assets/images/slider-img.png" alt="" />
+                    <img src="{{ URL::asset('assets/images/tela 1 (1).PNG') }}" alt="" />
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="img-box">
-                    <img src="assets/images/slider-img.png" alt="" />
+                    <img src="{{ URL::asset('assets/images/tela 1 (1).PNG') }}" alt="" />
                   </div>
                 </div>
               </div>
@@ -292,7 +292,7 @@
             <div class="box">
               <div class="head-box">
                 <div class="img-box">
-                  <img src="assets/images/cloud-download.png" alt="" />
+                  <img src="{{ URL::asset('assets/images/cloud-download.png') }}" alt="" />
                 </div>
                 <h6>
                   Download The App
@@ -309,7 +309,7 @@
             <div class="box">
               <div class="head-box">
                 <div class="img-box">
-                  <img src="assets/images/trophy_.png" alt="" />
+                  <img src="{{ URL::asset('assets/images/trophy_.png') }}" alt="" />
                 </div>
                 <h6>
                   Easy to Customize
@@ -331,14 +331,14 @@
           </div>
           <div class="col-md-4">
             <div class="main-img-box">
-              <img src="assets/images/download-img.png" alt="" />
+              <img src="{{ URL::asset('assets/images/tela 2 teste.PNG') }}" alt="" />
             </div>
           </div>
           <div class="col-md-4">
             <div class="box">
               <div class="head-box">
                 <div class="img-box">
-                  <img src="assets/images/playstore.png" alt="" />
+                  <img src="{{ URL::asset('assets/images/playstore.png') }}" alt="" />
                 </div>
                 <h6>
                   Connect Your Store
@@ -355,7 +355,7 @@
             <div class="box">
               <div class="head-box">
                 <div class="img-box">
-                  <img src="assets/images/heart.png" alt="" />
+                  <img src="{{ URL::asset('assets/images/heart.png') }}" alt="" />
                 </div>
                 <h6>
                   Enjoy Our App
@@ -446,10 +446,10 @@
       <div class="client_container layout_padding2-top">
         <div class="client-id">
           <div class="img-box">
-            <img src="assets/images/client.png" alt="" />
+            <img src="{{ URL::asset('assets/images/client.png') }}" alt="" />
           </div>
           <div class="name">
-            <img src="assets/images/quote.png" alt="" />
+            <img src="{{ URL::asset('assets/images/quote.png') }}" alt="" />
             <h6>
               Sandy Delex
             </h6>
@@ -515,7 +515,7 @@
         </div>
         <div class="col-md-6">
           <div class="contact_img-box">
-            <img src="assets/images/contact-img.png" alt="">
+            <img src="{{ URL::asset('assets/images/tela 3.PNG') }}" alt="">
           </div>
         </div>
       </div>
@@ -527,7 +527,7 @@
   <section class="info_section layout_padding-top">
     <div class="info_logo-box">
       <h2>
-        UXOS
+        Get Ready
       </h2>
     </div>
     <div class="container layout_padding2">
@@ -594,17 +594,17 @@
 
         <div class="social-box">
           <a href="">
-            <img src="assets/images/fb.png" alt="">
+            <img src="{{ URL::asset('assets/images/fb.png') }}" alt="">
           </a>
 
           <a href="">
-            <img src="assets/images/twitter.png" alt="">
+            <img src="{{ URL::asset('assets/images/twitter.png') }}" alt="">
           </a>
           <a href="">
-            <img src="assets/images/linkedin.png" alt="">
+            <img src="{{ URL::asset('assets/images/linkedin.png') }}" alt="">
           </a>
           <a href="">
-            <img src="assets/images/instagram.png" alt="">
+            <img src="{{ URL::asset('assets/images/instagram.png') }}" alt="">
           </a>
         </div>
       </div>
@@ -615,14 +615,14 @@
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2019 All Rights Reserved. Design by
+      &copy; 2022 todos os direitos reservados. Design por
       <a href="https://html.design/">Free Html Templates</a>
     </p>
   </section>
   <!-- footer section -->
 
-  <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+  <script type="text/javascript" src="{{ URL::asset('assets/js/jquery-3.4.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ URL::asset('assets/js/bootstrap.js') }}"></script>
 
   <script>
     function openNav() {

@@ -12,21 +12,21 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>UXOS</title>
+  <title>Get Ready</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{{ URL::asset('assets/css/bootstrap.css') }}" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="{{ URL::asset('assets/css/style.css') }}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="{{ URL::asset('assets/css/responsive.css') }}" rel="stylesheet" />
 </head>
 
 <body class="sub_page">
@@ -35,9 +35,9 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="{{ URL::to('page/index') }}">
             <span>
-              UXOS
+              Get Ready
             </span>
           </a>
 
@@ -51,10 +51,10 @@
             </div>
             <div id="myNav" class="overlay">
               <div class="overlay-content">
-                <a href="index.html">HOME</a>
-                <a href="about.html">ABOUT</a>
-                <a href="feature.html">FEATURE</a>
-                <a href="contact.html">CONTACT US</a>
+                <a href="{{ URL::to('home') }}">LOGIN</a>
+                <a href="{{ URL::to('page/contact') }}">CONTATO</a>
+                <a href="{{ URL::to('page/about') }}">SOBRE NÓS</a>
+                <a href="contact.html">DÚVIDAS</a>
               </div>
             </div>
           </div>
@@ -224,14 +224,14 @@
   <section class="info_section layout_padding-top">
     <div class="info_logo-box">
       <h2>
-        UXOS
+        Get Ready
       </h2>
     </div>
     <div class="container layout_padding2">
       <div class="row">
         <div class="col-md-3">
           <h5>
-            About Us
+            Quem somos:
           </h5>
           <p>
             dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r
@@ -291,17 +291,17 @@
 
         <div class="social-box">
           <a href="">
-            <img src="images/fb.png" alt="">
+            <img src="{{ URL::asset('assets/images/fb.png') }}" alt="">
           </a>
 
           <a href="">
-            <img src="images/twitter.png" alt="">
+            <img src="{{ URL::asset('assets/images/twitter.png') }}" alt="">
           </a>
           <a href="">
-            <img src="images/linkedin.png" alt="">
+            <img src="{{ URL::asset('assets/images/linkedin.png') }}" alt="">
           </a>
           <a href="">
-            <img src="images/instagram.png" alt="">
+            <img src="{{ URL::asset('assets/images/instagram.png') }}" alt="">
           </a>
         </div>
       </div>
@@ -312,14 +312,14 @@
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2019 All Rights Reserved. Design by
+      &copy; 2022 todos os direitos reservados. Design por
       <a href="https://html.design/">Free Html Templates</a>
     </p>
   </section>
   <!-- footer section -->
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="{{ URL::asset('assets/js/jquery-3.4.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ URL::asset('assets/js/bootstrap.js') }}"></script>
 
   <script>
     function openNav() {

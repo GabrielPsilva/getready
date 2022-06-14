@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\CelularController;
 use App\Http\Controllers\OrcamentoController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 
 /*
@@ -17,16 +18,23 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     //return view('welcome');
     return view('adminlte');
-});
+});*/
 
-//Route::get('/page/index', [App\Http\Controllers\PageController::class, 'index'])->name('index');
+Route::get('/', [App\Http\Controllers\PageController::class, 'index'])->name('index');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//-----------------------------------------HOMEPAGE-----------------------------------------------
 
-//----------------------------------------ORCAMENTO-------------------------------------------
+//Route::get('/'.PAGE.'/products', [PageController::class, 'products'])->name(PAGE.'.products');
+
+Route::get('/page/contact', [PageController::class, 'contact'])->name('page.contact');
+Route::get('/page/about', [PageController::class, 'about'])->name('page.about');
+Route::get('/page/index', [PageController::class, 'index'])->name('index');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+//----------------------------------------ORCAMENTO---------------------------------------------------
 
 Route::get('/orcamento/create', [OrcamentoController::class, 'create'])->name('orcamento.create');
 Route::post('/orcamento/create', [OrcamentoController::class, 'store'])->name('orcamento.store');
@@ -52,5 +60,3 @@ Route::delete('/celular/{id}', [CelularController::class, 'destroy'])->name('cel
 // ----------------------------------------- CELULARES --------------------------------------
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

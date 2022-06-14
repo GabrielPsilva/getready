@@ -44,7 +44,7 @@ body {
   content: "";
   width: 100px;
   height: 1px;
-  background-color: #8547ca;
+  background-color: #5271FF;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -230,7 +230,7 @@ a:focus {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
-  color: #8547ca;
+  color: #5271FF;
   margin-top: 5px;
 }
 
@@ -294,7 +294,7 @@ a:focus {
 .slider_section .detail-box h1 {
   text-transform: uppercase;
   font-weight: bold;
-  color: #8547ca;
+  color: #5271FF;
   font-size: 5.5rem;
 }
 
@@ -366,7 +366,7 @@ a:focus {
 }
 
 .slider_section .carousel-indicators li.active {
-  background-color: #8547ca;
+  background-color: #5271FF;
 }
 
 .feature_section {
@@ -396,7 +396,7 @@ a:focus {
 .feature_section .box .head-box .img-box svg {
   width: 50px;
   height: auto;
-  fill: #8547ca;
+  fill: #5271FF;
 }
 
 .feature_section .box .head-box h6 {
@@ -414,7 +414,7 @@ a:focus {
 }
 
 .feature_section .box:hover {
-  background-color: #8547ca;
+  background-color: #5271FF;
   color: #fefdfc;
 }
 
@@ -425,15 +425,15 @@ a:focus {
 .feature_section a {
   display: inline-block;
   padding: 10px 40px;
-  background-color: #8c60bd;
+  background-color: #5271FF;
   color: #fefdfc;
   border-radius: 0;
-  border: 1px solid #8c60bd;
+  border: 1px solid #5271FF;
 }
 
 .feature_section a:hover {
   background-color: transparent;
-  color: #8c60bd;
+  color: #5271FF;
 }
 
 .download_section {
@@ -493,16 +493,16 @@ a:focus {
 .download_section .btn-1 {
   display: inline-block;
   padding: 10px 40px;
-  background-color: #8c60bd;
+  background-color: #5271FF;
   color: #fefdfc;
   border-radius: 0;
-  border: 1px solid #8c60bd;
+  border: 1px solid #5271FF;
   margin-top: 25px;
 }
 
 .download_section .btn-1:hover {
   background-color: transparent;
-  color: #8c60bd;
+  color: #5271FF;
 }
 
 .download_section .btn-2 {
@@ -571,15 +571,15 @@ a:focus {
 .about_section .detail-box.b-1 a {
   display: inline-block;
   padding: 10px 40px;
-  background-color: #8c60bd;
+  background-color: #5271FF;
   color: #fefdfc;
   border-radius: 0;
-  border: 1px solid #8c60bd;
+  border: 1px solid #5271FF;
 }
 
 .about_section .detail-box.b-1 a:hover {
   background-color: transparent;
-  color: #8c60bd;
+  color: #5271FF;
 }
 
 .subscribe_section {
@@ -610,17 +610,17 @@ a:focus {
   text-transform: uppercase;
   display: inline-block;
   padding: 0 0;
-  background-color: #8c60bd;
+  background-color: #5271FF;
   color: #fefdfc;
   border-radius: 0;
-  border: 1px solid #8c60bd;
+  border: 1px solid #5271FF;
   font-weight: bold;
   line-height: 50px;
 }
 
 .subscribe_section form button:hover {
   background-color: transparent;
-  color: #8c60bd;
+  color: #5271FF;
 }
 
 .client_section .client_container .client-id {
@@ -655,15 +655,15 @@ a:focus {
 .client_section .client_container a {
   display: inline-block;
   padding: 10px 40px;
-  background-color: #8c60bd;
+  background-color: #5271FF;
   color: #fefdfc;
   border-radius: 0;
-  border: 1px solid #8c60bd;
+  border: 1px solid #5271FF;
 }
 
 .client_section .client_container a:hover {
   background-color: transparent;
-  color: #8c60bd;
+  color: #5271FF;
 }
 
 /* contact section */
@@ -716,7 +716,7 @@ a:focus {
 
 .contact_form-container button {
   border: none;
-  background-color: #8c60bd;
+  background-color: #5271FF;
   color: #fff;
   font-size: 15px;
   padding: 15px 45px;
@@ -763,7 +763,7 @@ a:focus {
 .info_logo-box h2 {
   font-weight: bold;
   padding: 5px 35px;
-  border-bottom: 1.5px solid #8547ca;
+  border-bottom: 1.5px solid #5271FF;
 }
 
 .info_section ul {
@@ -780,7 +780,7 @@ a:focus {
 }
 
 .info_section ul li a:hover {
-  color: #8547ca;
+  color: #5271FF;
 }
 
 .info_section .form_container input {
@@ -806,7 +806,7 @@ a:focus {
 }
 
 .info_section .form_container button {
-  background-color: #8c60bd;
+  background-color: #5271FF;
   border: none;
   outline: none;
   color: #fff;
@@ -842,7 +842,7 @@ a:focus {
 /* end info section */
 /* footer section*/
 .footer_section {
-  background-color: #8547ca;
+  background-color: #5271FF;
   padding: 20px;
 }
 

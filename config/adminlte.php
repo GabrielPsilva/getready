@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Get Ready Seguradora',
+    'title' => 'Get Ready',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -66,7 +66,7 @@ return [
 
     'usermenu_enabled' => true,
     'usermenu_header' => false,
-    'usermenu_header_class' => 'bg-primary',
+    'usermenu_header_class' => 'bg-secondary',
     'usermenu_image' => false,
     'usermenu_desc' => false,
     'usermenu_profile_url' => false,
@@ -103,9 +103,9 @@ return [
     */
 
     'classes_auth_card' => 'card-outline card-primary',
-    'classes_auth_header' => '',
+    'classes_auth_header' => 'bg-gradient-indigo',
     'classes_auth_body' => '',
-    'classes_auth_footer' => '',
+    'classes_auth_footer' => 'text-center',
     'classes_auth_icon' => '',
     'classes_auth_btn' => 'btn-flat btn-primary',
 
@@ -227,8 +227,8 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type'         => 'navbar-search',
-            'text'         => 'Procurar',
+            'type'         => 'false',
+            'text'         => 'false',
             'topnav_right' => true,
         ],
         [
@@ -274,59 +274,22 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
-        ],
+        
         ['header' => 'SOBRE A GET READY'],
         [
             'text'       => 'Quem somos',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'icon_color' => 'indigo',
+            'url'        => 'page/about',
         ],
         [
             'text'       => 'Dúvidas frequentes',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'icon_color' => 'indigo',
+            'url'        => '',
         ],
         [
             'text'       => 'Dicas',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'icon_color' => 'indigo',
+            'url'        => '',
         ],
     ],
 
