@@ -29,7 +29,7 @@
         {!! $mensagem !!}
     </div>
 
-    <a href="{{ URL::to('orcamento/create_pdf') }}"><button type="button" class="btn btn-primary">Criar PDF</button></a>
+    <a href="{{ URL::to('orcamento/create_pdf') }}"><button type="button" class="btn btn btn-outline-danger mt-2 mb-2"> Criar PDF <i class="fa fa-book"></i></button></a>
 @endisset
 
 @if ($errors->any())
