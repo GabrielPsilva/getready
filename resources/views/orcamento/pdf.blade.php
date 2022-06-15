@@ -26,7 +26,7 @@
     }
 
     @page front-page{
-    background-image: url("vendor/adminlte/dist/img/getready2-512x512.png");
+    background-image: url("vendor/adminlte/dist/img/getready2-512x512.jpeg") }};
     background-size: 8.5in 11in;
     background-position: right bottom;
     }
@@ -36,7 +36,7 @@
 <h1>Page 1</h1>
 
 <div class="right-image">
-    <img src="{{ URL::to('vendor/adminlte/dist/img/GetReadyLogo.png') }}" alt="">
+    <img src="{{ URL::to('vendor/adminlte/dist/img/getready2-512x512.jpeg') }}" alt="">
 </div>
     
 <div class="page-break"></div>

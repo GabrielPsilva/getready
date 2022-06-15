@@ -23,7 +23,7 @@ use App\Http\Controllers\PageController;
     return view('adminlte');
 });*/
 
-Route::get('/', [PageController::class, 'index'])->name('index');
+Route::get('/', [App\Http\Controllers\PageController::class, 'index'])->name('index');
 
 //-----------------------------------------HOMEPAGE-----------------------------------------------
 
