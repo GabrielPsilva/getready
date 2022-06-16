@@ -247,13 +247,13 @@ return [
             //'can'  => 'manage-blog',
         ],
         [
-            'text' => 'celular',
+            'text' => 'Lista de dispositivos',
             'url'  => 'celular',
             'can'  => 'is_admin',
             // apenas o admin pode visualizar essa rota
         ],
         [
-            'text' => 'Orçamento',
+            'text' => 'Solicitar orçamento',
             'url'  => 'orcamento/create',
             'can'  => 'is_padrao',
         ],
