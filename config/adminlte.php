@@ -255,7 +255,12 @@ return [
         [
             'text' => 'Orçamento',
             'url'  => 'orcamento/create',
-            //'can'  => 'manage-blog',
+            'can'  => 'is_padrao',
+        ],
+        [
+            'text' => 'Orçamentos cadastrados',
+            'url'  => 'orcamento',
+            'can'  => 'is_admin',
         ],
         [
             'text'        => 'pages',

@@ -16,7 +16,8 @@ class OrcamentoController extends Controller
      */
     public function index()
     {
-        //
+        $orcamentos = Orcamento::orderBy('id', 'DESC')->get();
+        return view('orcamento.index', ['orcamentos' => $orcamentos]);
     }
 
     /**

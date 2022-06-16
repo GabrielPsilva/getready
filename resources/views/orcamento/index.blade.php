@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">{{ __('Modelos') }}
                 
-                    <a href="{{ URL::to('celular/create') }}"><button type="button" class="btn btn-success btn-sm float-right">Adicionar novo modelo</button></a>
+                    <a href="{{ URL::to('orcamento/create') }}"><button type="button" class="btn btn-success btn-sm float-right">Adicionar novo modelo</button></a>
 
                 </div>
 
@@ -44,15 +44,15 @@
                         </thead>
                         <tbody>
                 
-                    @foreach ($celulares as $value)
+                    @foreach ($orcamentos as $value)
                         <tr>
                             <td>{{ $value->id }}</td>
                             <td>{{ $value->nome }}</td>
                             <td>{{ $value->valor }}</td>
-                            <td><a href="{{ url('celular/' . $value->id) }}"><button type="button" class="btn btn-block btn-primary btn-sm">Visualizar</button></a></td>
-                            <td><a href="{{ url('celular/' . $value->id . '/edit') }}"><button type="button" class="btn btn-block btn-warning btn-sm">Editar</button></a></td>
+                            <td><a href="{{ url('orcamento/' . $value->id) }}"><button type="button" class="btn btn-block btn-primary btn-sm">Visualizar</button></a></td>
+                            <td><a href="{{ url('orcamento/' . $value->id . '/edit') }}"><button type="button" class="btn btn-block btn-warning btn-sm">Editar</button></a></td>
                             <td>
-                                {{ Form::open(array('url' => 'celular/' . $value->id, 'onsubmit' => 'return ConfirmDelete()')) }}
+                                {{ Form::open(array('url' => 'orcamento/' . $value->id, 'onsubmit' => 'return ConfirmDelete()')) }}
                                 {{ Form::hidden('_method', 'DELETE') }}
                                 {{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
                                 {{ Form::close() }}
@@ -60,7 +60,7 @@
                         </tr>
 
                     @endforeach
-
+                
                         </tbody>
                     </table>
                     {{-- $celulares->links() --}}                 
