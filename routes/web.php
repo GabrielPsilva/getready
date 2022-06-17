@@ -45,6 +45,8 @@ Route::get('/orcamento/create', [OrcamentoController::class, 'create'])->name('o
 
 Route::post('/orcamento/create', [OrcamentoController::class, 'store'])->name('orcamento.store');
 
+Route::get('/orcamento/{id}', [OrcamentoController::class, 'show'])->name('orcamento.show')->can('is_admin');
+
 Route::get('/orcamento/create_pdf', [OrcamentoController::class, 'create_pdf'])->name('orcamento.create_pdf');
 
 //----------------------------------------ORCAMENTO-------------------------------------------

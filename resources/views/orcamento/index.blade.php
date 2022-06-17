@@ -2,14 +2,10 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="row">
+        <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Modelos') }}
-                
-                    <a href="{{ URL::to('orcamento/create') }}"><button type="button" class="btn btn-success btn-sm float-right">Adicionar novo modelo</button></a>
-
-                </div>
+                <div class="card-header">{{ __('Solicitações') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -31,28 +27,30 @@
                     }
                 </script>
                 
-                    <table class="table no-margin">
+                    <table class="table table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>#id</th>
-                                <th>nome</th>
-                                <th>valor</th>
-                                <th></th>
-                                <th>actions</th>
-                                <th></th>
+                                <th>#Id</th>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Cpf</th>
+                                <th>Telefone</th>
+                                <th>Ano</th>
                             </tr>
                         </thead>
                         <tbody>
                 
                     @foreach ($orcamentos as $value)
                         <tr>
-                            <td>{{ $value->id }}</td>
+                            <td>{{ $value->celular_id }}</td>
                             <td>{{ $value->nome }}</td>
-                            <td>{{ $value->valor }}</td>
-                            <td><a href="{{ url('orcamento/' . $value->id) }}"><button type="button" class="btn btn-block btn-primary btn-sm">Visualizar</button></a></td>
-                            <td><a href="{{ url('orcamento/' . $value->id . '/edit') }}"><button type="button" class="btn btn-block btn-warning btn-sm">Editar</button></a></td>
+                            <td>{{ $value->email }}</td>
+                            <td>{{ $value->cpf }}</td>
+                            <td>{{ $value->telefone }}</td>
+                            <td>{{ $value->ano }}</td>
+                            <td><a href="{{ url('orcamento/' . $value->celular_id) }}"><button type="button" class="btn btn-block btn-primary btn-sm">Visualizar</button></a></td>
                             <td>
-                                {{ Form::open(array('url' => 'orcamento/' . $value->id, 'onsubmit' => 'return ConfirmDelete()')) }}
+                                {{ Form::open(array('url' => 'orcamento/' . $value->celular_id, 'onsubmit' => 'return ConfirmDelete()')) }}
                                 {{ Form::hidden('_method', 'DELETE') }}
                                 {{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
                                 {{ Form::close() }}

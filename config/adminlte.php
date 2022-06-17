@@ -87,7 +87,7 @@ return [
     'layout_boxed' => null,
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
-    'layout_fixed_footer' => null,
+    'layout_fixed_footer' => true,
     'layout_dark_mode' => null,
 
     /*
@@ -271,13 +271,13 @@ return [
         ],
         ['header' => 'CONFIGURAÇÕES'],
         [
-            'text' => 'Profile',
+            'text' => 'Perfil',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
+            'text' => 'Alterar senha',
+            'url'  => 'password/reset',
             'icon' => 'fas fa-fw fa-lock',
         ],
         
