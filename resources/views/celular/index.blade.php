@@ -1,17 +1,20 @@
 @extends('adminlte::page')
 
+@section('title', 'Get ready - Modelos')
+
+@section('content_header')
+    <h1 style="text-align: center">Modelos</h1>
+@stop
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Modelos') }}
+            <div class="card" style="margin-bottom: 25px;">
                 
+                <div class="card-body">
                     <a href="{{ URL::to('celular/create') }}"><button type="button" class="btn btn-success btn-sm float-right">Adicionar novo modelo</button></a>
 
-                </div>
-
-                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -34,11 +37,11 @@
                     <table class="table no-margin">
                         <thead>
                             <tr>
-                                <th>#id</th>
+                                <th>ID</th>
                                 <th>nome</th>
                                 <th>valor</th>
                                 <th></th>
-                                <th>actions</th>
+                                <th>Ações</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -54,7 +57,7 @@
                             <td>
                                 {{ Form::open(array('url' => 'celular/' . $value->id, 'onsubmit' => 'return ConfirmDelete()')) }}
                                 {{ Form::hidden('_method', 'DELETE') }}
-                                {{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
+                                {{ Form::submit('Excluir', array('class' => 'btn btn-danger btn-sm')) }}
                                 {{ Form::close() }}
                             </td>
                         </tr>
@@ -70,6 +73,11 @@
     </div>
 </div>
 
-
+<footer class="main-footer">
+    <div class="float-right d-none d-sm-inline">
+    v3.0.3
+    </div>
+    <strong>Copyright © 2014-2022 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+</footer>
 
 @endsection

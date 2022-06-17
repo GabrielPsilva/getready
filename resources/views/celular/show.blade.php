@@ -19,6 +19,7 @@
 <p><b>Valor:</b>     {{ $celular->valor             }} </p>
 <p><b>Criação:</b>   {{ $celular->created_at        }} </p>
 
+
 </div>
 </div>
 </div>

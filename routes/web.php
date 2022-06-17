@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\CelularController;
 use App\Http\Controllers\OrcamentoController;
 use App\Http\Controllers\HomeController;
@@ -37,6 +38,30 @@ Route::get('/page/index', [PageController::class, 'index'])->name('index');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+//-----------------------------------------HOMEPAGE-----------------------------------------------
+
+
+//----------------------------------------USERS---------------------------------------------------
+
+Route::get('/user', [UserController::class, 'index'])->name('user.index')->can('is_admin');
+
+Route::get('/user/create', [UserController::class, 'create'])->name('user.create')->can('is_admin');
+
+Route::post('/user/create', [UserController::class, 'store'])->name('user.store')->can('is_admin');
+
+Route::get('/user/{id}/edit' , [UserController::class, 'edit'])->name('user.edit')->can('is_admin');
+
+Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update')->can('is_admin');
+
+Route::get('/user/perfil', [UserController::class, 'perfil'])->name('user.perfil')->can('is_admin');
+
+Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show')->can('is_admin');
+
+Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy')->can('is_admin');
+
+//----------------------------------------USERS---------------------------------------------------
+
+
 //----------------------------------------ORCAMENTO---------------------------------------------------
 
 Route::get('/orcamento', [OrcamentoController::class, 'index'])->name('orcamento.index')->can('is_admin');
@@ -48,6 +73,8 @@ Route::post('/orcamento/create', [OrcamentoController::class, 'store'])->name('o
 Route::get('/orcamento/{id}', [OrcamentoController::class, 'show'])->name('orcamento.show')->can('is_admin');
 
 Route::get('/orcamento/create_pdf', [OrcamentoController::class, 'create_pdf'])->name('orcamento.create_pdf');
+
+Route::delete('/orcamento/{id}', [OrcamentoController::class, 'destroy'])->name('celular.destroy')->can('is_admin');
 
 //----------------------------------------ORCAMENTO-------------------------------------------
 

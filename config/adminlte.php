@@ -87,7 +87,7 @@ return [
     'layout_boxed' => null,
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
-    'layout_fixed_footer' => true,
+    'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
     /*
@@ -263,11 +263,12 @@ return [
             'can'  => 'is_admin',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
+            'text'        => 'Usuários',
+            'url'         => 'user',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'label'       => 5,
+            'label_color' => 'primary',
+            'can'  => 'is_admin',
         ],
         ['header' => 'CONFIGURAÇÕES'],
         [

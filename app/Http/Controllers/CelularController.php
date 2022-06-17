@@ -98,16 +98,19 @@ class CelularController extends Controller
             'nome.min'       => 'O :attribute precisa ter no mínimo :min.',
             'valor.required' => 'O campo :attribute é obrigatorio!',
             'valor.numeric'  => 'O campo :attribute precisa ser numérico!',
+            'data de fabricacao.required' => 'O campo :attribute é obrigatório!'
         ];
 
         $validated = $request->validate([
-            'nome'          => 'required|min:5',
-            'valor'         => 'required|numeric',
+            'nome'               => 'required|min:5',
+            'valor'              => 'required|numeric',
+            'data de fabricacao' => 'required',
         ], $messages);
 
         $celular = new Celular;
-        $celular->nome          = $request->nome;
-        $celular->valor         = $request->valor;
+        $celular->nome               = $request->nome;
+        $celular->valor              = $request->valor;
+        $celular->data_de_fabricacao = $request->data_de_fabricacao;
         $celular->save();
 
         return redirect('/celular')->with('status', 'Celular criado com sucesso!');

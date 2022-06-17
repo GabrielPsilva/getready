@@ -48,11 +48,11 @@
                             <td>{{ $value->cpf }}</td>
                             <td>{{ $value->telefone }}</td>
                             <td>{{ $value->ano }}</td>
-                            <td><a href="{{ url('orcamento/' . $value->celular_id) }}"><button type="button" class="btn btn-block btn-primary btn-sm">Visualizar</button></a></td>
+                            <td><a href="{{ url('orcamento/' . $value->celular_id) }}"><button type="button" class="btn btn-primary btn-sm">Visualizar</button></a></td>
                             <td>
                                 {{ Form::open(array('url' => 'orcamento/' . $value->celular_id, 'onsubmit' => 'return ConfirmDelete()')) }}
                                 {{ Form::hidden('_method', 'DELETE') }}
-                                {{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
+                                {{ Form::submit('Excluir', array('class' => 'btn btn-danger btn-sm')) }}
                                 {{ Form::close() }}
                             </td>
                         </tr>
@@ -67,5 +67,12 @@
         </div>
     </div>
 </div>
+
+<footer class="main-footer fixed-bottom">
+    <div class="float-right d-none d-sm-inline">
+    v3.0.3
+    </div>
+    <strong>Copyright © 2014-2022 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+</footer>
 
 @endsection

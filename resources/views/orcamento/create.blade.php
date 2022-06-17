@@ -45,32 +45,87 @@
     <br>
     <br>
     {!! Form::open(['url' => '/orcamento/create']) !!}
-    <div class="row">
-        <div class="col-12">
-        {{ Form::label('Celular', 'Celular') }}
-        {{ Form::select('celular_id', $celulares) }}
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+            {{ Form::label('Celular', 'Celular:') }}
+            </div>
+            <div class="col-sm-10">
+            {{ Form::select('celular_id', $celulares) }}
+            </div>
         </div>
-        <div class="col-6">
-        {{ Form::label('Ano de fabricacao', 'Ano de fabricação') }}
-        {{ Form::selectRange('ano', 2010, 2022) }}
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+            {{ Form::label('Ano de fabricacao', 'Ano de fabricação:') }}
+            </div>
+            <div class="col-sm-10">
+            {{ Form::selectRange('ano', 2010, 2022) }}
+            </div>
         </div>
-        <div class="col-12">
-        {{ Form::label('Nome', 'Nome') }}
-        {{ Form::text('nome') }}
+
+        <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col-sm-2 pt-0">Opções</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                  <label class="form-check-label" for="gridRadios1">
+                    Roubo
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <label class="form-check-label" for="gridRadios2">
+                    Furto
+                  </label>
+                </div>
+                <div class="form-check disabled">
+                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                  <label class="form-check-label" for="gridRadios3">
+                    Líquido
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+            {{ Form::label('nome', 'Nome:') }}
+            </div>
+            <div class="col-sm-10">
+            {{ Form::text('nome') }}
+            </div>
         </div>
-        <div class="col-12">
-        {{ Form::label('mail', 'Email') }}
-        {{ Form::text('email') }}
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+            {{ Form::label('mail', 'Email:') }}
+            </div>
+            <div class="col-sm-10">
+            {{ Form::text('email') }}
+            </div>
         </div>
-        <div class="col-12">
-        {{ Form::label('cpf', 'Cpf') }}
-        {{ Form::text('cpf') }}
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+            {{ Form::label('cpf', 'Cpf:') }}
+            </div>
+            <div class="col-sm-10">
+            {{ Form::text('cpf') }}
+            </div>
         </div>
-        <div class="col-12">
-        {{ Form::label('telefone', 'Telefone') }}
-        {{ Form::text('telefone') }}
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+            {{ Form::label('telefone', 'Telefone:') }}
+            </div>
+            <div class="col-sm-10">
+            {{ Form::text('telefone') }}
+            </div>
         </div>
-    </div>
+    
     {{ Form::submit('Enviar' , ['class' => 'btn btn-outline-success mt-2 mb-2 ']) }}
     <a class="btn btn-primary " href="{{URL::to('orcamento/create/')}}">Cancelar</a>
 
@@ -81,5 +136,12 @@
 </div>
 </div>
 </div>
+
+<footer class="main-footer">
+    <div class="float-right d-none d-sm-inline">
+    v3.0.3
+    </div>
+    <strong>Copyright © 2014-2022 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+</footer>
 
 @endsection

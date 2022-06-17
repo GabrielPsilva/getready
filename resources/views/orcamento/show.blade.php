@@ -7,25 +7,35 @@
             <div class="card">
                 <div class="card-header">{{ __('Painel') }}</div>
 
-            <div class="card-body">
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-            
-
+                    <div class="container col-8">
                         <p>Id:       {{ $orcamento->celular_id }}</p>
                         <p>Nome:     {{ $orcamento->nome       }}</p>
                         <p>Email:    {{ $orcamento->email      }}</p>
                         <p>Cpf:      {{ $orcamento->cpf        }}</p>
                         <p>Telefone: {{ $orcamento->telefone   }}</p>
-                        <p>Ano:      {{ $orcamento->ano        }}</p> 
+                        <p>Ano:      {{ $orcamento->ano        }}</p>
+                    </div>
+                <a class="btn btn-primary " href="{{URL::to('orcamento/')}}">Voltar</a>
             </div>
         </div>
             </div>
         </div>
     </div>
 </div>
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
+
 @endsection

@@ -109,7 +109,8 @@ class OrcamentoController extends Controller
      */
     public function show($id)
     {
-        //
+        $orcamentos = Orcamento::findOrFail($id);
+        return view('orcamento.show', ['orcamento' => $orcamentos]);
     }
 
     /**
@@ -143,6 +144,9 @@ class OrcamentoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $orcamento = Orcamento::findOrFail($id);
+        $orcamento->delete();
+
+        return redirect('/orcamento')->with('status', 'Solicitação excluida com sucesso!');
     }
 }
