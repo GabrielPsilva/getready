@@ -273,7 +273,7 @@ return [
         ['header' => 'CONFIGURAÇÕES'],
         [
             'text' => 'Perfil',
-            'url'  => 'admin/settings',
+            'url'  => 'user/perfil',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
@@ -289,14 +289,14 @@ return [
             'url'        => 'page/about',
         ],
         [
-            'text'       => 'Dúvidas frequentes',
+            'text'       => 'Fale conosco',
             'icon_color' => 'indigo',
-            'url'        => '',
+            'url'        => 'page/contact',
         ],
         [
             'text'       => 'Dicas',
             'icon_color' => 'indigo',
-            'url'        => '',
+            'url'        => 'page/advices',
         ],
     ],
 

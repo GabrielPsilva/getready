@@ -55,7 +55,7 @@ Route::get('/user/{id}/edit' , [UserController::class, 'edit'])->name('user.edit
 
 Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update')->can('is_admin');
 
-Route::get('/user/perfil', [UserController::class, 'perfil'])->name('user.perfil')->can('is_admin');
+Route::get('/user/perfil', [UserController::class, 'perfil'])->name('user.perfil');
 
 Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show')->can('is_admin');
 
@@ -70,13 +70,13 @@ Route::get('/orcamento', [OrcamentoController::class, 'index'])->name('orcamento
 
 Route::get('/orcamento/create', [OrcamentoController::class, 'create'])->name('orcamento.create');
 
+Route::get('/orcamento/create_pdf', [OrcamentoController::class, 'create_pdf'])->name('orcamento.create_pdf');
+
 Route::post('/orcamento/create', [OrcamentoController::class, 'store'])->name('orcamento.store');
 
 Route::get('/orcamento/{id}', [OrcamentoController::class, 'show'])->name('orcamento.show')->can('is_admin');
 
-Route::get('/orcamento/create_pdf', [OrcamentoController::class, 'create_pdf'])->name('orcamento.create_pdf');
-
-Route::delete('/orcamento/{id}', [OrcamentoController::class, 'destroy'])->name('celular.destroy')->can('is_admin');
+Route::delete('/orcamento/{id}', [OrcamentoController::class, 'destroy'])->name('orcamento.destroy')->can('is_admin');
 
 //----------------------------------------ORCAMENTO-------------------------------------------
 

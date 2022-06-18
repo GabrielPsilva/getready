@@ -31,7 +31,6 @@
 
     <a href="{{ URL::to('orcamento/create_pdf') }}"><button type="button" class="btn btn btn-outline-danger mt-2 mb-2"> Criar PDF <i class="fas fa-download"></i></button></a>
 
-    <a href="invoice-print.html" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
 @endisset
 
 @if ($errors->any())
@@ -48,41 +47,33 @@
     <br>
     {!! Form::open(['url' => '/orcamento/create']) !!}
 
-        <div class="form-group row">
-            <div class="col-sm-2">
+        <div class="form-group">
             {{ Form::label('Celular', 'Celular:') }}
-            </div>
-            <div class="col-sm-10">
-            {{ Form::select('celular_id', $celulares) }}
-            </div>
+            {{ Form::select('celular_id', $celulares, null, array('class' => 'form-control ')) }}
         </div>
 
-        <div class="form-group row">
-            <div class="col-sm-2">
+        <div class="form-group">
             {{ Form::label('Ano de fabricacao', 'Ano de fabricação:') }}
-            </div>
-            <div class="col-sm-10">
-            {{ Form::selectRange('ano', 2010, 2022) }}
-            </div>
+            {{ Form::selectRange('ano', 2010, 2022, null , ['class' => 'form-control', 'placeholder' => 'Ex: 2019']) }}
         </div>
-
+        
         <fieldset class="form-group">
             <div class="row">
-              <legend class="col-form-label col-sm-2 pt-0">Opções</legend>
+              <label class="col-form-label col-sm-2 pt-0">Opções</label>
               <div class="col-sm-10">
-                <div class="form-check">
+                <div class="form-check-inline">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
                   <label class="form-check-label" for="gridRadios1">
                     Roubo
                   </label>
                 </div>
-                <div class="form-check">
+                <div class="form-check-inline">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
                   <label class="form-check-label" for="gridRadios2">
                     Furto
                   </label>
                 </div>
-                <div class="form-check disabled">
+                <div class="form-check-inline disabled">
                   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
                   <label class="form-check-label" for="gridRadios3">
                     Líquido
@@ -92,40 +83,24 @@
             </div>
           </fieldset>
 
-        <div class="form-group row">
-            <div class="col-sm-2">
+        <div class="form-group">
             {{ Form::label('nome', 'Nome:') }}
-            </div>
-            <div class="col-sm-10">
-            {{ Form::text('nome') }}
-            </div>
+            {{ Form::text('nome', null , ['class' => 'form-control']) }}
         </div>
 
-        <div class="form-group row">
-            <div class="col-sm-2">
+        <div class="form-group">
             {{ Form::label('mail', 'Email:') }}
-            </div>
-            <div class="col-sm-10">
-            {{ Form::text('email') }}
-            </div>
+            {{ Form::text('email', null , ['class' => 'form-control']) }}
         </div>
 
-        <div class="form-group row">
-            <div class="col-sm-2">
+        <div class="form-group">
             {{ Form::label('cpf', 'Cpf:') }}
-            </div>
-            <div class="col-sm-10">
-            {{ Form::text('cpf') }}
-            </div>
+            {{ Form::text('cpf', null , ['class' => 'form-control']) }}
         </div>
 
-        <div class="form-group row">
-            <div class="col-sm-2">
+        <div class="form-group">
             {{ Form::label('telefone', 'Telefone:') }}
-            </div>
-            <div class="col-sm-10">
-            {{ Form::text('telefone') }}
-            </div>
+            {{ Form::text('telefone', null , ['class' => 'form-control']) }}
         </div>
     
     {{ Form::submit('Enviar' , ['class' => 'btn btn-outline-success mt-2 mb-2 ']) }}

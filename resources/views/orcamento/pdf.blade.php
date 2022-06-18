@@ -30,26 +30,16 @@
 
 <body>
 
-  <table width="100%">
-    <tr>
-        <td valign="top"><img src="vendor/adminlte/dist/img/getready2-512x512.jpeg"/></td>
-        <td align="right">
-            <h3>Get Ready Seguradora</h3>
-            <pre>
-                Delligence
-                Company address
-                Tax ID
-                phone
-                fax
-            </pre>
-        </td>
-    </tr>
+    <div class="col-12">
+        <h4>
+        <i class="fas fa-globe"></i> Get ready, Inc.
+        <small class="float-right">Date: 2/10/2014</small>
+        </h4>
+        </div>
 
-  </table>
-
-  <div class="card">
+  
     <?php echo $mensagem; ?>
-  </div>
+  
 
   <table width="100%">
     <tr>

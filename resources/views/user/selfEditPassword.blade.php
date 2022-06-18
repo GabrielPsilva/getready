@@ -1,5 +1,7 @@
 @extends('adminlte::page')
 
+@section('title', 'Get ready - Alterar senha')
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -27,44 +29,54 @@
             </div>
             @endif
 
-                    <div class="content">
                 <div class="title m-b-md">
-                        <div class="alert alert-primary" role="alert">
-                    <h4>ALTERAR SENHA DE:</h4>  
+                    <div class="alert alert-primary" role="alert">
+
+                        <h4>ALTERAR SENHA DE:</h4>  
                         
                         <div class="alert alert-warning" style="text-align:center;display:inline-block"> 
-                        
                             <h5 style="font-weight:bold;"> {{ $user->name }} </h5>
-                        
                         </div>
+
                     </div>
                 </div>
-                {{ Form::model($user, array('route' => array('selfUpdatePassword'), 'method' => 'PUT')) }}
-                <br>
 
-                {{ Form::label('password_old', 'Senha antiga: ') }}
-                {{ Form::password('password_old') }}
-                <br>
-
-                {{ Form::label('password_new', 'Senha nova: ') }}
-                {{ Form::password('password_new') }}
-                <br>
-
-                {{ Form::label('password_new2', 'Confirmação da senha nova: ') }}
-                {{ Form::password('password_new2') }}
                 
                 <br>
+                <br>
+                {{ Form::model($user, array('route' => array('selfUpdatePassword'), 'method' => 'PUT')) }}
+                
+                <div class="form-group">
+                    {{ Form::label('password_old', 'Senha antiga: ') }}
+                    {{ Form::password('password_old', ['class' => 'form-control']) }}
+                </div>
+                
+
+                <div class="form-group">
+                    {{ Form::label('password_new', 'Senha nova: ') }}
+                    {{ Form::password('password_new', ['class' => 'form-control']) }}
+                </div>
+                
+
+                <div class="form-group">
+                    {{ Form::label('password_new2', 'Confirmação da senha nova: ') }}
+                    {{ Form::password('password_new2', ['class' => 'form-control']) }}
+                </div>
+                
+
                 {{ Form::submit('Enviar' , ['class' => 'btn btn-outline-success mt-2 mb-2']) }}
+                <a class="btn btn-primary " href="{{URL::to('/home')}}">Cancelar</a>
+                
                 {{ Form::close() }}
 
 
+            
             </div>
-        </div>
 
 
-                </div>
             </div>
         </div>
     </div>
 </div>
-@endsection          
+@endsection 
+

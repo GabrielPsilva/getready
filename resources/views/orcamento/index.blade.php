@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
             <div class="card">
                 <div class="card-header">{{ __('Solicitações') }}</div>
 
@@ -30,12 +30,14 @@
                     <table class="table table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>#Id</th>
+                                <th>ID</th>
                                 <th>Nome</th>
                                 <th>Email</th>
                                 <th>Cpf</th>
                                 <th>Telefone</th>
-                                <th>Ano</th>
+                                <th>Ano de fabricação</th>
+                                <th>Opção 1</th>
+                                <th>Opção 2</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,9 +50,9 @@
                             <td>{{ $value->cpf }}</td>
                             <td>{{ $value->telefone }}</td>
                             <td>{{ $value->ano }}</td>
-                            <td><a href="{{ url('orcamento/' . $value->celular_id) }}"><button type="button" class="btn btn-primary btn-sm">Visualizar</button></a></td>
+                            <td><a href="{{ url('orcamento/' . $value->id) }}"><button type="button" class="btn btn-primary btn-sm">Visualizar</button></a></td>
                             <td>
-                                {{ Form::open(array('url' => 'orcamento/' . $value->celular_id, 'onsubmit' => 'return ConfirmDelete()')) }}
+                                {{ Form::open(array('url' => 'orcamento/' . $value->id, 'onsubmit' => 'return ConfirmDelete()')) }}
                                 {{ Form::hidden('_method', 'DELETE') }}
                                 {{ Form::submit('Excluir', array('class' => 'btn btn-danger btn-sm')) }}
                                 {{ Form::close() }}

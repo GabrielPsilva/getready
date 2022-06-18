@@ -60,7 +60,5 @@ class CelularSeeder extends Seeder
             'valor' => '1299.99',
             'data de fabricacao' => '2021-09-14'
         ]);
-
-        //
     }
 }

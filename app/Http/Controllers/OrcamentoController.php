@@ -109,8 +109,8 @@ class OrcamentoController extends Controller
      */
     public function show($id)
     {
-        $orcamentos = Orcamento::findOrFail($id);
-        return view('orcamento.show', ['orcamento' => $orcamentos]);
+        $orcamento = Orcamento::findOrFail($id);
+        return view('orcamento.show', ['orcamento' => $orcamento]);
     }
 
     /**
