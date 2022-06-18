@@ -29,13 +29,13 @@
                         <td> {{$value->email}}</td>
                         <td> {{$value->name}}</td>
                         
-                        <td><a class="btn btn-primary" href="{{ URL::to('user/' . $value->id) }}">visualizar</a></td>
-                        <td><a class="btn btn-warning" href="{{ URL::to('user/' . $value->id . '/edit') }}">editar</a></td>
+                        <td><a class="btn btn-primary btn-sm" href="{{ URL::to('user/' . $value->id) }}">Visualizar</a></td>
+                        <td><a class="btn btn-warning btn-sm" href="{{ URL::to('user/' . $value->id . '/edit') }}">Editar</a></td>
                     <!-- <a class="btn btn-danger" href="#"> deletar</a> -->
                     <td>
                     {{ Form::open(array('url' => 'user/' . $value->id, 'onsubmit' => 'return ConfirmDelete()')) }}
                     {{ Form::hidden('_method', 'DELETE') }}
-                    {{ Form::submit('Excluir', array('class' => 'btn btn-danger')) }}
+                    {{ Form::submit('Excluir', array('class' => 'btn btn-danger btn-sm')) }}
                     {{ Form::close() }}
                     </td>
                 

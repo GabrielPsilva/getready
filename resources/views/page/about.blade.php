@@ -78,17 +78,17 @@
           <div class="col-md-5">
             <div class="detail-box b-1">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                Nossa missão é assumir riscos e prestar serviços, por meio de um atendimento familiar que supere expectativas, garantindo agilidade a custos competitivos com responsabilidade social e ambiental.
               </p>
-              <a href="">
-                Read More
+              <a href="{{ URL::to('page/index') }}">
+                Voltar
               </a>
             </div>
           </div>
           <div class="col-md-5">
             <div class="detail-box b-2">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                Conheça os valores e ideais que nos movem, todos os dias, para oferecer a você produtos e serviços que proporcionem mais tranquilidade, segurança e conveniência.
               </p>
             </div>
           </div>
@@ -111,53 +111,53 @@
       <div class="row">
         <div class="col-md-3">
           <h5>
-            About Us
+            Quem somos
           </h5>
           <p>
-            dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r
+            A Get ready é mais que uma seguradora, somos a solução para melhorar e facilitar as experiências do cliente.
           </p>
         </div>
         <div class="col-md-3">
           <h5>
-            Useful Link
+            Referências
           </h5>
           <ul>
             <li>
-              <a href="">
-                Video games
+              <a href="https://laravel.com">
+                Laravel
               </a>
             </li>
             <li>
-              <a href="">
-                Remote control
+              <a href="https://getbootstrap.com">
+                Bootstrap
               </a>
             </li>
             <li>
-              <a href="">
-                3d controller
+              <a href="https://adminlte.io/docs/3.0/layout.html">
+                AdminLTE
               </a>
             </li>
           </ul>
         </div>
         <div class="col-md-3">
           <h5>
-            Contact Us
+            Fale conosco
           </h5>
           <p>
-            dolor sit amet, consectetur magna aliqua. quisdotempor incididunt ut e
+            A seguradora Get ready pode tirar todas as suas dúvidas.
           </p>
         </div>
         <div class="col-md-3">
 
           <div class="subscribe_container">
             <h5>
-              Newsletter
+              Receba novidades
             </h5>
             <div class="form_container">
               <form action="">
-                <input type="email" placeholder="Enter your email">
+                <input type="email" placeholder="Seu email">
                 <button type="submit">
-                  Subscribe
+                  Inscreva-se
                 </button>
               </form>
             </div>
@@ -171,17 +171,17 @@
 
         <div class="social-box">
           <a href="">
-            <img src="assets/images/fb.png" alt="">
+            <img src="{{ URL::asset('assets/images/fb.png') }}" alt="">
           </a>
 
           <a href="">
-            <img src="assets/images/twitter.png" alt="">
+            <img src="{{ URL::asset('assets/images/twitter.png') }}" alt="">
           </a>
           <a href="">
-            <img src="assets/images/linkedin.png" alt="">
+            <img src="{{ URL::asset('assets/images/linkedin.png') }}" alt="">
           </a>
           <a href="">
-            <img src="assets/images/instagram.png" alt="">
+            <img src="{{ URL::asset('assets/images/instagram.png') }}" alt="">
           </a>
         </div>
       </div>
@@ -198,8 +198,8 @@
   </section>
   <!-- footer section -->
 
-  <script type="text/javascript" src="assets/js/jquery-3.4.1.min.assets/js"></script>
-  <script type="text/javascript" src="assets/js/bootstrap.assets/js"></script>
+  <script type="text/javascript" src="{{ URL::asset('assets/js/jquery-3.4.1.min.js') }}"></script>
+  <script type="text/javascript" src="{{ URL::asset('assets/js/bootstrap.js') }}"></script>
 
   <script>
     function openNav() {

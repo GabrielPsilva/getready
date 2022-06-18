@@ -147,4 +147,67 @@ class UserController extends Controller
 
         return redirect()->route('user.index')->with('message', 'usuário excluido com sucesso!');
     }
+
+    public function selfEditPassword() {
+
+        $user_id = Auth::id();
+        $user = User::findOrFail($user_id);
+        return view('user.selfEditPassword', ['user' => $user]);
+    }
+    
+    public function selfUpdatePassword(Request $request) {
+        
+        $user_id = Auth::id();
+
+        //print_r($request->all());
+
+        $message = [
+            'password_old.required' => 'required',
+            //'password_new.min' => 'O campo senha precisa ser maior do que :min !',
+            'password_new.same' => 'Senhas não conferem.',
+        ];
+
+        $validatedData = $request->validate([
+            'password_old' => 'required',
+            'password_new' => 'required|same:password_new2',
+        ], $message);
+        
+        $user = User::findOrFail($user_id);
+
+        
+        //-----------------------------------
+        //echo('<br>$user->password: ' . $user->password);
+        //@todo - fazer um if verificando se o $request->password_new == $request->password_new2
+        // Caso nao seja
+        //return redirect()->route('selfEditPassword')->with('message', 'Senhas não conferem.');
+
+        /*if($request->password_new != $request->password_new2){
+            
+            return redirect()->route('selfEditPassword')->with('message', 'Senhas não conferem.');
+        
+        }*/
+        //--------------------------------------------------------
+        
+        
+        if (Hash::check($request->password_old, $user->password)){
+
+
+            if (!empty(trim($request->password_new))) {
+
+                echo('<br>Hash::make($request->password_new: ' . Hash::make($request->password_new));
+                $user->password = Hash::make($request->password_new);     
+                $user->save();
+
+                //echo('<br>$user->password: ' . $user->password);
+                //dd('<br>' . 'AQUI');
+
+                return redirect()->route('selfEditPassword')->with('message', 'Senha atualizada com sucesso!');
+            }
+
+        } else {
+            return redirect()->route('selfEditPassword')->with('message', 'Senha inválida, tente novamente.');
+        }
+           
+    }
+
 }

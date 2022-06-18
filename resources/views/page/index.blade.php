@@ -72,12 +72,12 @@
                 Seguro celular
               </h2>
               <h1>
-                Mobile <br />
-                applications
+                 <br />
+                  
               </h1>
               <div>
-                <a href="">
-                  Read More
+                <a href="{{ URL::to('page/about') }}">
+                  Saiba Mais
                 </a>
               </div>
             </div>
@@ -107,10 +107,10 @@
                 </div>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="sr-only">Previous</span>
+                <span class="sr-only">Anterior</span>
               </a>
               <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="sr-only">Next</span>
+                <span class="sr-only">Próximo</span>
               </a>
             </div>
           </div>
@@ -126,8 +126,8 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Amazing Features To Use <br />
-          Our Application
+          A cobertura que <br />
+          seu aparelho precisa!
         </h2>
       </div>
     </div>
@@ -157,14 +157,13 @@
 
               </div>
               <h6>
-                Quick Boostup
+                Velocidade de serviço
               </h6>
             </div>
             <div class="detail-box">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam
+                A contratação é 100% online e, em poucos passos,
+                você conta com uma cobertura completa.
               </p>
             </div>
           </div>
@@ -179,14 +178,14 @@
                 </svg>
               </div>
               <h6>
-                Modern Design
+                Minimalista e prático
               </h6>
             </div>
             <div class="detail-box">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam
+                É simples, é fácil, é a Get!
+                Não existe segredo na hora de contratar ou utilizar a proteção Get!
+                fale conosco e tire suas principais dúvidas em instantes.
               </p>
             </div>
           </div>
@@ -254,24 +253,18 @@
 
               </div>
               <h6>
-                High Resolution
+              Solução de resolução
               </h6>
             </div>
             <div class="detail-box">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam
+                Você tem medo de que algum imprevisto aconteça com o seu aparelho?
+                Com o Seguro Celular Get ready, você fica tranquilo e não corre o risco de ficar sem ele.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="d-flex justify-content-center">
-      <a href="">
-        Read More
-      </a>
     </div>
   </section>
 
@@ -283,7 +276,7 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Download Anytime, Anywhere
+          O que é e como funciona o Seguro Celular Get ready?
         </h2>
       </div>
       <div class="layout_padding2-top">
@@ -295,14 +288,12 @@
                   <img src="{{ URL::asset('assets/images/cloud-download.png') }}" alt="" />
                 </div>
                 <h6>
-                  Download The App
+                  Documento PDF
                 </h6>
               </div>
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam
+                  Após efetuar o cadastramento do aparelho, a Get ready fornece uma cópia em PDF para o cliente com todos os dados bem detalhados e organizados! 
                 </p>
               </div>
             </div>
@@ -312,21 +303,14 @@
                   <img src="{{ URL::asset('assets/images/trophy_.png') }}" alt="" />
                 </div>
                 <h6>
-                  Easy to Customize
+                  Campeã em facilidade
                 </h6>
               </div>
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam
+                  A verificação do celular pode ser feita em qualquer lugar de forma rápida e segura, deixando assim, nosso comprometimento bem visível e claro.
                 </p>
               </div>
-            </div>
-            <div>
-              <a href="" class="btn-1">
-                Read More
-              </a>
             </div>
           </div>
           <div class="col-md-4">
@@ -341,14 +325,12 @@
                   <img src="{{ URL::asset('assets/images/playstore.png') }}" alt="" />
                 </div>
                 <h6>
-                  Connect Your Store
+                  Conecte-se
                 </h6>
               </div>
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam
+                  O celular hoje em dia já faz parte do nosso cotidiano, nós não podemos negar. Com todo esse contato, alguns perrengues acabam se tornando inevitáveis.
                 </p>
               </div>
             </div>
@@ -358,21 +340,14 @@
                   <img src="{{ URL::asset('assets/images/heart.png') }}" alt="" />
                 </div>
                 <h6>
-                  Enjoy Our App
+                  Aproveite nosso seguro
                 </h6>
               </div>
               <div class="detail-box">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam
+                  Hoje em dia, é difícil conhecer uma pessoa que não possua um smartphone, mas, será que todo mundo que tem um aparelho celular tem seguro?
                 </p>
               </div>
-            </div>
-            <div>
-              <a href="" class="btn-2">
-                Download Now
-              </a>
             </div>
           </div>
         </div>
@@ -383,11 +358,12 @@
   <!-- end download section -->
 
   <!-- about section -->
+  <!-- about section -->
   <section class="about_section layout_padding">
     <div class="container">
       <div class="heading_container d-flex justify-content-lg-start">
         <h2>
-          About Us
+          Quem Somos:
         </h2>
       </div>
       <div class="layout_padding2-top">
@@ -395,17 +371,17 @@
           <div class="col-md-5">
             <div class="detail-box b-1">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                Nossa missão é assumir riscos e prestar serviços, por meio de um atendimento familiar que supere expectativas, garantindo agilidade a custos competitivos com responsabilidade social e ambiental.
               </p>
-              <a href="">
-                Read More
+              <a href="{{ URL::to('page/index') }}">
+                Voltar
               </a>
             </div>
           </div>
           <div class="col-md-5">
             <div class="detail-box b-2">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                Conheça os valores e ideais que nos movem, todos os dias, para oferecer a você produtos e serviços que proporcionem mais tranquilidade, segurança e conveniência.
               </p>
             </div>
           </div>
@@ -421,13 +397,13 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Subscribe For Updates
+          Fique por dentro:
         </h2>
       </div>
       <form action="" class="layout_padding2-top">
-        <input type="email" placeholder="Enter your email" />
+        <input type="email" placeholder="Seu email" />
         <button>
-          subscribe
+          Inscreva-se
         </button>
       </form>
     </div>
@@ -440,7 +416,7 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Check what people say About us!
+          Sua avaliação é muito importante para nós!
         </h2>
       </div>
       <div class="client_container layout_padding2-top">
@@ -451,7 +427,7 @@
           <div class="name">
             <img src="{{ URL::asset('assets/images/quote.png') }}" alt="" />
             <h6>
-              Sandy Delex
+              Gabriel Fernandes
             </h6>
             <p>
               Reprehenderit
@@ -465,11 +441,6 @@
             veniam, quis nostrud esse cillum
           </p>
         </div>
-        <div class="d-flex justify-content-end">
-          <a href="">
-            Read More
-          </a>
-        </div>
       </div>
     </div>
   </section>
@@ -481,7 +452,7 @@
     <div class="container">
       <div class="d-flex ">
         <h2>
-          Contact Us
+          Fale conosco
         </h2>
       </div>
       <div class="row">
@@ -491,20 +462,20 @@
             <div class="contact_form-container">
               <div>
                 <div>
-                  <input type="text" placeholder="Name">
+                  <input type="text" placeholder="Nome">
                 </div>
                 <div>
-                  <input type="text" placeholder="Phone Number">
+                  <input type="text" placeholder="Número de celular">
                 </div>
                 <div>
                   <input type="email" placeholder="Email">
                 </div>
                 <div class="mt-5">
-                  <input type="text" placeholder="Message">
+                  <input type="text" placeholder="Deixe sua mensagem">
                 </div>
                 <div class="mt-5">
                   <button type="submit">
-                    send
+                    Enviar
                   </button>
                 </div>
               </div>
@@ -534,53 +505,53 @@
       <div class="row">
         <div class="col-md-3">
           <h5>
-            About Us
+            Quem somos
           </h5>
           <p>
-            dolor sit amet, consectetur magna aliqua. Ut enim ad minim veniam, quisdotempor incididunt r
+            A Get ready é mais que uma seguradora, somos a solução para melhorar e facilitar as experiências do cliente.
           </p>
         </div>
         <div class="col-md-3">
           <h5>
-            Useful Link
+            Referências
           </h5>
           <ul>
             <li>
-              <a href="">
-                Video games
+              <a href="https://laravel.com">
+                Laravel
               </a>
             </li>
             <li>
-              <a href="">
-                Remote control
+              <a href="https://getbootstrap.com">
+                Bootstrap
               </a>
             </li>
             <li>
-              <a href="">
-                3d controller
+              <a href="https://adminlte.io/docs/3.0/layout.html">
+                AdminLTE
               </a>
             </li>
           </ul>
         </div>
         <div class="col-md-3">
           <h5>
-            Contact Us
+            Fale conosco
           </h5>
           <p>
-            dolor sit amet, consectetur magna aliqua. quisdotempor incididunt ut e
+            A seguradora Get ready pode tirar todas as suas dúvidas.
           </p>
         </div>
         <div class="col-md-3">
 
           <div class="subscribe_container">
             <h5>
-              Newsletter
+              Receba novidades
             </h5>
             <div class="form_container">
               <form action="">
-                <input type="email" placeholder="Enter your email">
+                <input type="email" placeholder="Seu email">
                 <button type="submit">
-                  Subscribe
+                  Inscreva-se
                 </button>
               </form>
             </div>

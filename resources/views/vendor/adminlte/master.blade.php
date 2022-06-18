@@ -104,6 +104,8 @@
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
 
+    @yield('footer')
+
 </body>
 
 </html>

@@ -1,31 +1,160 @@
 @extends('adminlte::page')
 
+@section('title', 'Get ready - Home')
+
+@section('content_header')
+   
+<h1 style="text-align: center;">Bem-Vindo</h1>
+@stop
+
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+<div class="container col-10"> 
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+
+    <div class="row">
+   
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-info">
+          <div class="inner">
+            
+
+            <p>Novos Pedidos</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-concierge-bell"></i>
+          </div>
+          
         </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-success">
+          <div class="inner">
+            
+
+            <p>Pedidos concluidos</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-danger">
+          <div class="inner">
+            
+
+            <p>Pedidos negados</p>
+          </div>
+          <div class="icon">
+            <i class="far fa-thumbs-down"></i>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-warning">
+          <div class="inner">
+            
+           
+            <p>Produtos cadastrados</p>
+          </div>
+          <div class="icon">
+            <i class="fas fa-shopping-bag"></i>
+          </div>
+        </div>
+      </div>
+    
     </div>
+
+    
+
+      {{-- <div class="card-footer bg-dark mb-3">
+        <div class="row">
+          <div class="col-sm-3 col-6">
+            <div class="description-block border-right">
+              <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 17%</span>
+              <h5 class="description-header">$35,210.43</h5>
+              <span class="description-text">TOTAL REVENUE</span>
+            </div>
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-3 col-6">
+            <div class="description-block border-right">
+              <span class="description-percentage text-warning"><i class="fas fa-caret-left"></i> 0%</span>
+              <h5 class="description-header">$10,390.90</h5>
+              <span class="description-text">TOTAL COST</span>
+            </div>
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-3 col-6">
+            <div class="description-block border-right">
+              <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 20%</span>
+              <h5 class="description-header">$24,813.53</h5>
+              <span class="description-text">TOTAL PROFIT</span>
+            </div>
+            <!-- /.description-block -->
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-3 col-6">
+            <div class="description-block">
+              <span class="description-percentage text-danger"><i class="fas fa-caret-down"></i> 18%</span>
+              <h5 class="description-header">1200</h5>
+              <span class="description-text">GOAL COMPLETIONS</span>
+            </div>
+            <!-- /.description-block -->
+          </div>
+        </div>
+        <!-- /.row -->
+      </div> --}}
+
+     
+
+        <div class="card">
+          <div class="card-header border-0">
+            <h3 class="card-title">Produtos mais vendidos</h3>
+            <div class="card-tools">
+             
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <table class="table table-striped table-valign-middle">
+              <thead>
+              <tr>
+                <th>Poduto</th>
+                <th>Preço</th>
+                <th>Vendas</th>
+                
+              </tr>
+              </thead>
+              <tbody>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
 </div>
 
-<footer class="main-footer">
-    <div class="float-right d-none d-sm-inline">
-    v3.0.3
-    </div>
-    <strong>Copyright © 2014-2022 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-</footer>
 
-@endsection
+
+
+
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop

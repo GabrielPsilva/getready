@@ -29,7 +29,9 @@
         {!! $mensagem !!}
     </div>
 
-    <a href="{{ URL::to('orcamento/create_pdf') }}"><button type="button" class="btn btn btn-outline-danger mt-2 mb-2"> Criar PDF <i class="fa fa-book"></i></button></a>
+    <a href="{{ URL::to('orcamento/create_pdf') }}"><button type="button" class="btn btn btn-outline-danger mt-2 mb-2"> Criar PDF <i class="fas fa-download"></i></button></a>
+
+    <a href="invoice-print.html" rel="noopener" target="_blank" class="btn btn-default"><i class="fas fa-print"></i> Print</a>
 @endisset
 
 @if ($errors->any())
@@ -137,11 +139,5 @@
 </div>
 </div>
 
-<footer class="main-footer">
-    <div class="float-right d-none d-sm-inline">
-    v3.0.3
-    </div>
-    <strong>Copyright © 2014-2022 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-</footer>
-
 @endsection
+

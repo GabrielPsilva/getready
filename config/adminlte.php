@@ -263,9 +263,9 @@ return [
             'can'  => 'is_admin',
         ],
         [
-            'text'        => 'Usuários',
+            'text'        => 'Usuários registrados',
             'url'         => 'user',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'fas fa-users',
             'label'       => 5,
             'label_color' => 'primary',
             'can'  => 'is_admin',
@@ -278,7 +278,7 @@ return [
         ],
         [
             'text' => 'Alterar senha',
-            'url'  => 'password/reset',
+            'url'  => 'selfEditPassword',
             'icon' => 'fas fa-fw fa-lock',
         ],
         

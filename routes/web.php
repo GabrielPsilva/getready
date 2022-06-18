@@ -97,4 +97,12 @@ Route::delete('/celular/{id}', [CelularController::class, 'destroy'])->name('cel
 
 // ----------------------------------------- CELULARES --------------------------------------
 
+// ----------------------------------------- USER PASSWORD EDIT --------------------------------------
+
+Route::get('/selfEditPassword', [Usercontroller::class, 'selfEditPassword'])->name('selfEditPassword');
+
+Route::put('/selfUpdatePassword', [Usercontroller::class, 'selfUpdatePassword'])->name('selfUpdatePassword');
+
+// ----------------------------------------- USER PASSWORD EDIT --------------------------------------
+
 Auth::routes();
