@@ -72,8 +72,8 @@
                 Seguro celular
               </h2>
               <h1>
-                 <br />
-                  
+                  Proteger, <br />
+                    Preservar
               </h1>
               <div>
                 <a href="{{ URL::to('page/about') }}">
