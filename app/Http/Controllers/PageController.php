@@ -46,4 +46,9 @@ class PageController extends Controller
     {
         return view('page.about');
     }
+
+    public function advices()
+    {
+        return view('page.advices');
+    }
 }

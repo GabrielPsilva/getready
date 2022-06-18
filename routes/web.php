@@ -30,6 +30,8 @@ Route::get('/', [App\Http\Controllers\PageController::class, 'index'])->name('in
 
 //Route::get('/'.PAGE.'/products', [PageController::class, 'products'])->name(PAGE.'.products');
 
+Route::get('/page/advices', [PageController::class, 'advices'])->name('page.advices');
+
 Route::get('/page/contact', [PageController::class, 'contact'])->name('page.contact');
 
 Route::get('/page/about', [PageController::class, 'about'])->name('page.about');

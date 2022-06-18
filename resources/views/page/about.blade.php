@@ -12,7 +12,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Get Ready</title>
+  <title>Get Ready - Quem somos</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnassets/js.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
@@ -54,7 +54,7 @@
                 <a href="{{ URL::to('home') }}">LOGIN</a>
                 <a href="{{ URL::to('page/contact') }}">CONTATO</a>
                 <a href="{{ URL::to('page/about') }}">SOBRE NÓS</a>
-                <a href="contact.html">DÚVIDAS</a>
+                <a href="{{ URL::to('page/advices') }}">DICAS</a>
               </div>
             </div>
           </div>
