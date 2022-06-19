@@ -16,49 +16,49 @@ class CelularSeeder extends Seeder
         Celular::create([
             'nome' => 'Samsung Galaxy A22 128GB',
             'valor' => '1259.99',
-            'data de fabricacao' => '2021-07-04'
+            'data_de_fabricacao' => '2021-07-04'
         ]);
 
         Celular::create([
             'nome' => 'Samsung Galaxy A52s 128GB',
             'valor' => '1699.99',
-            'data de fabricacao' => '2021-04-05'
+            'data_de_fabricacao' => '2021-04-05'
         ]);
 
         Celular::create([
             'nome' => 'Samsung Galaxy A32s 128GB',
             'valor' => '1599.99',
-            'data de fabricacao' => '2021-04-26'
+            'data_de_fabricacao' => '2021-04-26'
         ]);
 
         Celular::create([
             'nome' => 'Samsung Galaxy A02 32GB',
             'valor' => '1199.99',
-            'data de fabricacao' => '2021-07-04'
+            'data_de_fabricacao' => '2021-07-04'
         ]);
 
         Celular::create([
             'nome' => 'Samsung Galaxy S20 128GB',
             'valor' => '1979.99',
-            'data de fabricacao' => '2021-11-12'
+            'data_de_fabricacao' => '2021-11-12'
         ]);
 
         Celular::create([
             'nome' => 'Samsung Galaxy M12 64GB',
             'valor' => '1599.99',
-            'data de fabricacao' => '2021-06-02'
+            'data_de_fabricacao' => '2021-06-02'
         ]);
 
         Celular::create([
             'nome' => 'Samsung Galaxy A22 128GB',
             'valor' => '1299.99',
-            'data de fabricacao' => '2021-07-18'
+            'data_de_fabricacao' => '2021-07-18'
         ]);
 
         Celular::create([
             'nome' => 'Samsung Galaxy M22 128GB',
             'valor' => '1299.99',
-            'data de fabricacao' => '2021-09-14'
+            'data_de_fabricacao' => '2021-09-14'
         ]);
     }
 }

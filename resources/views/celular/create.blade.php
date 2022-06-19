@@ -34,7 +34,7 @@
 {{ Form::text('valor') }}
 <br>
 {{ Form::label('data de fabricacao', 'Data de fabricação') }}
-{{ Form::text('valor') }}
+{{ Form::text('data_de_fabricacao') }}
 <br>
 {{ Form::submit('Enviar' , ['class' => 'btn btn-outline-success mt-2 mb-2']) }}
 <a class="btn btn-primary " href="{{URL::to('celular/')}}">Cancelar</a>

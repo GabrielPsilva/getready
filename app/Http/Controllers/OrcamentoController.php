@@ -28,8 +28,8 @@ class OrcamentoController extends Controller
 
     public function create_pdf(Request $request)
     {
-        $mensagem = $request->session()->get('mensagem');
-        $pdf = PDF::loadView('orcamento.pdf', ['mensagem' => $mensagem]);
+        $orcamento = $request->session()->get('orcamento');
+        $pdf = PDF::loadView('orcamento.pdf', ['orcamento' => $orcamento]);
         return $pdf->download('orcamento.pdf');
     }
 
@@ -83,23 +83,24 @@ class OrcamentoController extends Controller
         $orcamento->cpf            = $request->cpf;
         $orcamento->telefone       = $request->telefone;
         $orcamento->ano            = $request->ano;
-        $orcamento->valor_total    = $valor_total;
+        $orcamento->valor_total    = round($valor_total,2);
         $orcamento->valor_parcela  = $valor_parcela;
         $orcamento->save();
 
+        $request->session()->put('orcamento', $orcamento);
 
-        $mensagem = "Caro(a) {$orcamento->nome}<br>";
+        /*$mensagem = "Caro(a) {$orcamento->nome}<br>";
         $mensagem .= "o valor total do seu seguro é R$ $orcamento->valor_total <br>";
         for ($i=1; $i <= 12; $i++) { 
             $mensagem .= "- parcela {$i} = R$ {$orcamento->valor_parcela}<br>";
-        }
+        }*/
         //dd($mensagem);
 
         //return redirect('/orcamento/create')->with('status', $mensagem);//'Orçamento efetuado com sucesso!');
-        $request->session()->put('mensagem', $mensagem);
+        //$request->session()->put('mensagem', $mensagem);
         
         $celulares = Celular::orderBy('nome', 'ASC')->pluck('nome', 'id');
-        return view('orcamento.create', ['mensagem' => $mensagem, 'celulares' => $celulares]);
+        return view('orcamento.create', ['celulares' => $celulares, 'orcamento' => $orcamento]);
     }
     /**
      * Display the specified resource.

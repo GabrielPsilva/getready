@@ -55,18 +55,19 @@
 
     <div class="col-12">
         <h4>
-            <img src="{{ URL::asset('vendor/adminlte/dist/img/GetReadyLogo.jpeg') }}" alt="" /> Seguradora, Inc.
+            <img src="{{ URL::asset('vendor/adminlte/dist/img/GetReadyLogo.jpeg') }}" alt=""/> Seguradora, Inc.
         </h4>
         <small class="float-right">Data: 20/06/2022</small>
         </div>
 
     <table width="100%">
+
         <tr>
             <td><strong>De:</strong> Admin - Rio de janeiro</td>
             <td><strong>Para:</strong> Gabriel - Rio de janeiro</td>
         </tr>
     
-      </table>
+    </table>
 
       <br/>
       <br/>
@@ -99,7 +100,7 @@
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td> Samsung m12 64GB</td>
+            <td>{{$orcamento->celular->nome}}</td>
             <td align="right">2019</td>
             <td align="right">1599,99</td>
             <td align="right">784,95</td>
@@ -141,7 +142,26 @@
        
         <br />
 
-      <?php echo $mensagem ?>
+        <div class="alert alert-success" role="alert">
+          Caro(a) {{$orcamento->nome}} <br>
+          O valor total do seu seguro é R$ {{$orcamento->valor_total}} <br>
+          <table>
+              <tr>
+                <th>parcela</th>
+                <th>valor</th>
+              </tr>
+          @for ($i = 1; $i <= 12; $i++)
+  
+          <tr>
+              <td>{{$i}}</td>
+              <td>R$ {{$orcamento->valor_parcela}}</td>
+            </tr>
+  
+          @endfor
+  
+          </table>
+            
+      </div>
 
         <br />
 

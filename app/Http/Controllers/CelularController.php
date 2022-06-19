@@ -94,17 +94,17 @@ class CelularController extends Controller
     {
 
         $messages = [
-            'nome.required'  => 'O campo :attribute é obrigatorio!',
-            'nome.min'       => 'O :attribute precisa ter no mínimo :min.',
-            'valor.required' => 'O campo :attribute é obrigatorio!',
-            'valor.numeric'  => 'O campo :attribute precisa ser numérico!',
-            'data de fabricacao.required' => 'O campo :attribute é obrigatório!'
+            'nome.required'               => 'O campo :attribute é obrigatorio!',
+            'nome.min'                    => 'O :attribute precisa ter no mínimo :min.',
+            'valor.required'              => 'O campo :attribute é obrigatorio!',
+            'valor.numeric'               => 'O campo :attribute precisa ser numérico!',
+            'data_de_fabricacao.required' => 'O campo :attribute é obrigatório!'
         ];
 
         $validated = $request->validate([
             'nome'               => 'required|min:5',
             'valor'              => 'required|numeric',
-            'data de fabricacao' => 'required',
+            'data_de_fabricacao' => 'required',
         ], $messages);
 
         $celular = new Celular;

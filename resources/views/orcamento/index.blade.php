@@ -30,7 +30,7 @@
                     <table class="table table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>Celular</th>
                                 <th>Total</th>
                                 <th>Parcela</th>
                                 <th>Nome</th>
@@ -44,7 +44,7 @@
                 
                     @foreach ($orcamentos as $value)
                         <tr>
-                            <td>{{ $value->celular_id }}</td>
+                            <td>{{$value->celular->nome}}</td>
                             <td>{{ $value->valor_total }}</td>
                             <td>{{ $value->valor_parcela }}</td>
                             <td>{{ $value->nome }}</td>

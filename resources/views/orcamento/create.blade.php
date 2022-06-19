@@ -24,9 +24,26 @@
                         </div>
                     @endif
 
-@isset($mensagem)
+@isset($orcamento)
     <div class="alert alert-success" role="alert">
-        {!! $mensagem !!}
+        Caro(a) {{$orcamento->nome}} <br>
+        O valor total do seu seguro é R$ {{$orcamento->valor_total}} <br>
+        <table>
+            <tr>
+              <th>parcela</th>
+              <th>valor</th>
+            </tr>
+        @for ($i = 1; $i <= 12; $i++)
+
+        <tr>
+            <td>{{$i}}</td>
+            <td>R$ {{$orcamento->valor_parcela}}</td>
+          </tr>
+
+        @endfor
+
+        </table>
+          
     </div>
 
     <a href="{{ URL::to('orcamento/create_pdf') }}"><button type="button" class="btn btn btn-outline-danger mt-2 mb-2"> Criar PDF <i class="fas fa-download"></i></button></a>

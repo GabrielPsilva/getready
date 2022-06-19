@@ -15,9 +15,10 @@
                     @endif
 
 <h2>Celular</h2>
-<p><b>Nome:</b>      {{ $celular->nome              }} </p>
-<p><b>Valor:</b>     {{ $celular->valor             }} </p>
-<p><b>Criação:</b>   {{ $celular->created_at        }} </p>
+<p><b>Nome:</b>       {{ $celular->nome              }} </p>
+<p><b>Valor:</b>      {{ $celular->valor             }} </p>
+<p><b>Criação:</b>    {{ $celular->created_at        }} </p>
+<p><b>Atualizado:</b> {{ $celular->updated_at        }} </p>
 
 
 </div>
