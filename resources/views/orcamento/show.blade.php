@@ -15,12 +15,15 @@
                     @endif
 
                     <div class="container col-8">
-                        <p>Id:       {{ $orcamento->id         }}</p>
-                        <p>Nome:     {{ $orcamento->nome       }}</p>
-                        <p>Email:    {{ $orcamento->email      }}</p>
-                        <p>Cpf:      {{ $orcamento->cpf        }}</p>
-                        <p>Telefone: {{ $orcamento->telefone   }}</p>
-                        <p>Ano:      {{ $orcamento->ano        }}</p>
+                        <p>Id:              {{ $orcamento->celular_id   }}</p>
+                        <p>Nome:            {{ $orcamento->nome         }}</p>
+                        <p>Email:           {{ $orcamento->email        }}</p>
+                        <p>Cpf:             {{ $orcamento->cpf          }}</p>
+                        <p>Telefone:        {{ $orcamento->telefone     }}</p>
+                        <p>Ano:             {{ $orcamento->ano          }}</p>
+                        <p>Valor total:     {{ $orcamento->valor_total  }}</p>
+                        <p>Valor parcela:   {{ $orcamento->valor_parcela}}</p>
+
                     </div>
                 <a class="btn btn-primary " href="{{URL::to('orcamento/')}}">Voltar</a>
             </div>

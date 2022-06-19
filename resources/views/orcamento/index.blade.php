@@ -31,11 +31,11 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>Total</th>
+                                <th>Parcela</th>
                                 <th>Nome</th>
-                                <th>Email</th>
                                 <th>Cpf</th>
-                                <th>Telefone</th>
-                                <th>Ano de fabricação</th>
+                                <th>Email</th>
                                 <th>Opção 1</th>
                                 <th>Opção 2</th>
                             </tr>
@@ -45,11 +45,11 @@
                     @foreach ($orcamentos as $value)
                         <tr>
                             <td>{{ $value->celular_id }}</td>
+                            <td>{{ $value->valor_total }}</td>
+                            <td>{{ $value->valor_parcela }}</td>
                             <td>{{ $value->nome }}</td>
-                            <td>{{ $value->email }}</td>
                             <td>{{ $value->cpf }}</td>
-                            <td>{{ $value->telefone }}</td>
-                            <td>{{ $value->ano }}</td>
+                            <td>{{ $value->email }}</td>
                             <td><a href="{{ url('orcamento/' . $value->id) }}"><button type="button" class="btn btn-primary btn-sm">Visualizar</button></a></td>
                             <td>
                                 {{ Form::open(array('url' => 'orcamento/' . $value->id, 'onsubmit' => 'return ConfirmDelete()')) }}
