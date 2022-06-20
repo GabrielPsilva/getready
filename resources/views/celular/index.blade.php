@@ -10,7 +10,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card" style="margin-bottom: 25px;">
+            <div class="card">
                 
                 <div class="card-body">
                     <a href="{{ URL::to('celular/create') }}"><button type="button" class="btn btn-success btn-sm float-right">Adicionar novo modelo</button></a>
@@ -20,13 +20,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-
-                    @if (session('status'))
-                    <div class="alert alert-success">
-                        {{ session('status') }}
-                    </div>
-                @endif
                 
                 <script>
                     function ConfirmDelete() {

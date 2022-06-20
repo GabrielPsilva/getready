@@ -1,5 +1,11 @@
 @extends('adminlte::page')
 
+@section('title', 'Get Ready - Orçamentos cadastrados')
+
+@section('content_header')
+    <h1 style="text-align: center">Orçamentos cadastrados</h1>
+@stop
+
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
@@ -8,32 +14,26 @@
                 <div class="card-header">{{ __('Solicitações') }}</div>
 
                 <div class="card-body">
+                    
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-
-                    @if (session('status'))
-                    <div class="alert alert-success">
-                        {{ session('status') }}
-                    </div>
-                @endif
-                
                 <script>
                     function ConfirmDelete() {
                         return confirm('Tem certeza que deseja excluir este registro?');
                     }
                 </script>
                 
-                    <table class="table table-bordered table-hover">
+                    <table class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>Celular</th>
+                                <th>Dispositivo</th>
                                 <th>Total</th>
                                 <th>Parcela</th>
-                                <th>Nome</th>
+                                <th>Usuário</th>
                                 <th>Cpf</th>
                                 <th>Email</th>
                                 <th>Opção 1</th>

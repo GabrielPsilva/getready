@@ -1,5 +1,7 @@
 @extends('adminlte::page')
 
+@section('title', 'Get Ready - Criar orçamentos')
+
 @section('content_header')
     <h1 style="text-align: center">Seguro celular</h1>
 @stop
@@ -24,41 +26,46 @@
                         </div>
                     @endif
 
-@isset($orcamento)
-    <div class="alert alert-success" role="alert">
-        Caro(a) {{$orcamento->nome}} <br>
-        O valor total do seu seguro é R$ {{$orcamento->valor_total}} <br>
-        <table>
-            <tr>
-              <th>parcela</th>
-              <th>valor</th>
-            </tr>
-        @for ($i = 1; $i <= 12; $i++)
+            @isset($orcamento)
 
-        <tr>
-            <td>{{$i}}</td>
-            <td>R$ {{$orcamento->valor_parcela}}</td>
-          </tr>
+            <div class="row">
 
-        @endfor
+                <div class="col-12 table-responsive">
+                    <h4>Caro(a) {{$orcamento->nome}} <br>
+                    O valor total do seu seguro é R$ {{$orcamento->valor_total}} <br></h4>
 
-        </table>
-          
-    </div>
+                    <table class="table table-striped">
+                        <tr>
+                        <th>parcela</th>
+                        <th>valor</th>
+                        </tr>
 
-    <a href="{{ URL::to('orcamento/create_pdf') }}"><button type="button" class="btn btn btn-outline-danger mt-2 mb-2"> Criar PDF <i class="fas fa-download"></i></button></a>
+                    @for ($i = 1; $i <= 12; $i++)
+                        <tr>
+                            <td>{{$i}}</td>
+                            <td>R$ {{$orcamento->valor_parcela}}</td>
+                        </tr>
+                    @endfor
 
-@endisset
+                    </table>
+                </div>
 
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+            </div>
+
+                <a href="{{ URL::to('orcamento/create_pdf') }}"><button type="button" class="btn btn btn-danger mt-2 mb-2"> Criar PDF <i class="fas fa-download"></i></button></a>
+
+            @endisset
+
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
     <br>
     <br>
@@ -71,27 +78,27 @@
 
         <div class="form-group">
             {{ Form::label('Ano de fabricacao', 'Ano de fabricação:') }}
-            {{ Form::selectRange('ano', 2010, 2022, null , ['class' => 'form-control', 'placeholder' => 'Ex: 2019']) }}
+            {{ Form::selectRange('ano', 2010, 2022, null , ['class' => 'form-control', 'placeholder' => 'Selecionar']) }}
         </div>
         
         <fieldset class="form-group">
             <div class="row">
-              <label class="col-form-label col-sm-2 pt-0">Opções</label>
+              <label class="col-form-label col-sm-2 pt-0">Opções:</label>
               <div class="col-sm-10">
                 <div class="form-check-inline">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                  <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios1" value="option1">
                   <label class="form-check-label" for="gridRadios1">
                     Roubo
                   </label>
                 </div>
                 <div class="form-check-inline">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                  <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2">
                   <label class="form-check-label" for="gridRadios2">
-                    Furto
+                    Quebra
                   </label>
                 </div>
                 <div class="form-check-inline disabled">
-                  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                  <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios3" value="option3">
                   <label class="form-check-label" for="gridRadios3">
                     Líquido
                   </label>

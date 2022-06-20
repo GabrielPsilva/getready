@@ -31,6 +31,7 @@ class OrcamentoController extends Controller
         $orcamento = $request->session()->get('orcamento');
         $pdf = PDF::loadView('orcamento.pdf', ['orcamento' => $orcamento]);
         return $pdf->download('orcamento.pdf');
+        
     }
 
     public function create()

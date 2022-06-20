@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Get ready - Criar novo usuário')
 
 @section('content_header')
     <h1 style="text-align: center">Usuários</h1>
@@ -8,19 +8,27 @@
 
 @section('content')
 
-<div class="container col-8">
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">{{ __('Solicitações') }}</div>
 
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
+                <div class="card-body">
+
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
 
             {{ Form::open(array('url' => '/user/create')) }}
+
+
             <div class="row">
                 <div class="col-6">
                     {{ Form::label('name', 'Nome:') }}
@@ -44,28 +52,19 @@
                 </div>
             </div>
             
-            {{ Form::submit('Enviar' , ['class' => 'btn btn-outline-success mt-3']) }}
-
+                    {{ Form::submit('Enviar' , ['class' => 'btn btn-outline-success mt-2 mb-2']) }}
+                    <a class="btn btn-primary" href="{{URL::to('user/')}}">Voltar</a>
         
         
             {{ Form::close()  }}
 
 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-        </div>
-
-        
-
-
-
-
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
-@stop
+@endsection
 
